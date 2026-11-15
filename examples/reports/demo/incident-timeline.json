@@ -1,0 +1,137 @@
+[
+  {
+    "timestamp": "2026-11-10T19:40:00.000Z",
+    "eventId": "evt_969c8550e1b83b9d6d92",
+    "type": "metric",
+    "service": "checkout",
+    "severity": "info",
+    "description": "Baseline checkout p95 latency 220ms, error rate 0.1%",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 1
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:45:00.000Z",
+    "eventId": "evt_9a1ec8c4509bf193501e",
+    "type": "deploy",
+    "service": "checkout",
+    "severity": "info",
+    "description": "Checkout release 2.7.0 rollout started",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 2
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:49:00.000Z",
+    "eventId": "evt_5cc6ce3f88bbe686a2b1",
+    "type": "error",
+    "service": "checkout",
+    "severity": "error",
+    "description": "Intermittent checkout payment dependency timeout before second deployment",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 3
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:52:00.000Z",
+    "eventId": "evt_cc4992c8882161412b0a",
+    "type": "deploy",
+    "service": "checkout",
+    "severity": "info",
+    "description": "Checkout release 2.7.1 rolled out",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 4
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:54:00.000Z",
+    "eventId": "evt_9a8cc244ee051d5ad97a",
+    "type": "alert",
+    "service": "checkout",
+    "severity": "critical",
+    "description": "Checkout error budget burn above threshold",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 5
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:55:00.000Z",
+    "eventId": "evt_591427918bf4b89155c4",
+    "type": "metric",
+    "service": "checkout",
+    "severity": "warning",
+    "description": "Checkout p95 latency 2100ms, error rate 8%",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 6
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:56:00.000Z",
+    "eventId": "evt_5ef4f8aad618256ca464",
+    "type": "error",
+    "service": "checkout",
+    "severity": "error",
+    "description": "Payment gateway timeout; Bearer [REDACTED] should be hidden; contact [REDACTED_EMAIL]",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 7
+    }
+  },
+  {
+    "timestamp": "2026-11-10T19:57:00.000Z",
+    "eventId": "evt_4c27901e059d268cdfc4",
+    "type": "deploy",
+    "service": "notifications",
+    "severity": "info",
+    "description": "Unrelated notifications release",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "deployments.csv",
+      "sha256": "529732004d8da13a70b348e7ae95d315fee0018cab187e0df49f3ad1dd7789ad",
+      "record": 1
+    }
+  },
+  {
+    "timestamp": "2026-11-10T20:02:00.000Z",
+    "eventId": "evt_4db866928afb7dadea76",
+    "type": "log",
+    "service": "payments",
+    "severity": "warning",
+    "description": "External payment processor increased latency",
+    "verification": "observed",
+    "timePrecision": "s",
+    "source": {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "record": 8
+    }
+  }
+]

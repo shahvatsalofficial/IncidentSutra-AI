@@ -1,0 +1,2 @@
+# Workflow design
+Intake → sanitize → normalize timestamps → source-index → timeline → service and trace correlation → alternative hypotheses + contradictions → missing evidence → optional human-approved diagnostics → blameless postmortem → independent evidence audit → human-approved mitigation decisions → post-incident learning. Portability: each specialist skill receives structured inputs and returns evidence-bound outputs; orchestration can be native IDE subagents or sequential manual steps.

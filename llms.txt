@@ -1,0 +1,32 @@
+# IncidentSutra AI
+
+> Offline, read-only incident investigation CLI plus 20 portable agent skills (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot). Turns exported logs, metrics, alerts and deployments into an auditable UTC timeline, competing unconfirmed root-cause hypotheses with counter-evidence, and a blameless postmortem draft, written as Markdown, HTML and JSON. Zero dependencies, no API key, no network, Apache-2.0, created by Vatsal Shah.
+
+It never confirms a root cause, never executes anything against production, and records missing data as unknown. Redaction is best effort and not DLP. The automated audit is a self-audit, not a third-party certification.
+
+## Docs
+- [README](README.md): overview, quick start, proof, limits
+- [Documentation index](documents/IncidentSutra-AI/README.md)
+- [Executive summary](documents/IncidentSutra-AI/01-executive-summary.md)
+- [Functional specification](documents/IncidentSutra-AI/02-functional-spec.md): commands, inputs, outputs, hypothesis families
+- [Technical specification](documents/IncidentSutra-AI/03-technical-spec.md)
+- [Architecture](documents/IncidentSutra-AI/04-architecture.md)
+- [User guide](documents/IncidentSutra-AI/05-user-guide.md)
+- [Security, privacy and legal](documents/IncidentSutra-AI/06-security-privacy-legal.md)
+- [Independent audit and evidence](documents/IncidentSutra-AI/07-independent-audit.md)
+- [Agent catalogue](documents/IncidentSutra-AI/08-agent-catalog.md)
+- [FAQ](documents/IncidentSutra-AI/09-faq.md)
+- [Observed test results](documents/IncidentSutra-AI/test-results.md)
+
+## Quick start
+- `npx incidentsutra analyze --input <dir> --out report`
+- Output: report/incident-report.html, .md, .json, postmortem-draft.md, hypothesis-register.md
+- `npx incidentsutra verify --report report/incident-report.json`
+- `npx incidentsutra audit --out audit` and `npx incidentsutra benchmark`
+- Requires Node.js 20 or newer.
+
+## Optional
+- [Agent catalogue](docs/AGENT_CATALOG.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Evidence model](docs/EVIDENCE_MODEL.md)
+- [Changelog](CHANGELOG.md)

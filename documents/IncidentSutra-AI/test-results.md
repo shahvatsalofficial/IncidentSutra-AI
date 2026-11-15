@@ -1,0 +1,208 @@
+# Test results (observed)
+
+Command: `node --test`
+
+| Total | Pass | Fail | Skipped | Exit code |
+| --- | --- | --- | --- | --- |
+| 192 | 192 | 0 | 0 | 0 |
+
+Environment: Node v24.15.0, win32/x64, commit `uncommitted`.
+
+Skips: Two symlink tests return early when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.
+
+Regenerate with `npm run test:report`. This file is machine-written from the real run; it is not edited by hand.
+
+## Cases
+
+- PASS — creates a timestamp-sorted observed timeline
+- PASS — never claims causality: all hypotheses unconfirmed, confidence undetermined, review pending
+- PASS — a deployment near the alert stays correlation only
+- PASS — pre-existing error before the later deployment is recorded as counter-evidence
+- PASS — fixture offers at least two competing explanation families
+- PASS — dependency signal after onset is flagged as possible effect
+- PASS — each hypothesis has falsifiable content and unexecuted read-only checks
+- PASS — absent metrics are unknown, not fabricated
+- PASS — missing traces and changes are flagged
+- PASS — mixed offsets produce an explicit clock-skew gap
+- PASS — numeric metric series are summarised from observed values only
+- PASS — no production operation is represented as run
+- PASS — reusable agent contract is complete and validates
+- PASS — claims separate observed, inferred, unknown and not-run
+- PASS — every hypothesis reference exists in the event evidence
+- PASS — report validates against the v2 schema
+- PASS — stable report IDs for identical input
+- PASS — report ID changes when the window changes
+- PASS — verification fails on summary tamper
+- PASS — verification fails on unknown evidence reference
+- PASS — verification fails on forced confirmed root cause
+- PASS — verification fails on approved decision
+- PASS — verification fails on claimed production mutation
+- PASS — verification fails on forged event text
+- PASS — verification fails on timeline pointing nowhere
+- PASS — verification rejects non-reports
+- PASS — legacy v1 schema id is still recognised
+- PASS — source re-hash passes for untouched input and fails for changed input
+- PASS — markdown report has evidence IDs, human approval and legend
+- PASS — postmortem draft is blameless and leaves human sections open
+- PASS — hypothesis register lists reviewer decision placeholders
+- PASS — HTML report escapes untrusted text and carries a CSP with no script
+- PASS — HTML report is accessible: lang, viewport, landmarks, svg title, skip of colour-only meaning
+- PASS — synthetic flag appears only when requested
+- PASS — markdown table cells cannot be broken by pipes or newlines
+- PASS — comparison recognises added, removed and same-content events
+- PASS — comparing a report with itself reports no change
+- PASS — rejects an out-of-range correlation window
+- PASS — requires at least one event
+- PASS — no incident signals yields only the unknown-cause hypothesis
+- PASS — alert storms are detected
+- PASS — rollback counts as a change
+- PASS — --version prints the package version
+- PASS — help lists every command
+- PASS — doctor reports offline, key-free operation and honest gaps
+- PASS — skills list shows all 20 roles
+- PASS — unknown command exits 1
+- PASS — analyze requires --input and --out
+- PASS — analyze rejects a non-numeric window
+- PASS — analyze writes MD, HTML, JSON, postmortem, register, JSONL, timeline and provenance
+- PASS — analyze output is byte-identical across runs
+- PASS — analyze --synthetic labels the HTML report
+- PASS — analyze writes ingestion-errors.json when records are rejected
+- PASS — verify fails (exit 2) on a tampered report
+- PASS — verify --input detects changed source telemetry
+- PASS — compare works on two verified reports and rejects invalid ones
+- PASS — redact preview prints counts but never raw values
+- PASS — benchmark passes all 26 cases
+- PASS — audit passes, writes JSON, MD and HTML
+- PASS — skill installer requires host and project
+- PASS — skill installer rejects unknown hosts
+- PASS — skill installer installs 20 skills project-locally for claude
+- PASS — skill installer installs 20 skills project-locally for cursor
+- PASS — skill installer installs 20 skills project-locally for codex
+- PASS — skill installer installs 20 skills project-locally for gemini
+- PASS — skill installer installs 20 skills project-locally for copilot
+- PASS — skill installer refuses to overwrite
+- PASS — serve requires a strong token and a valid report
+- PASS — normalizes +05:30 to UTC
+- PASS — normalizes negative offsets
+- PASS — midnight rollover across the date line
+- PASS — accepts a leap day
+- PASS — rejects timestamp "2026-11-11T01:15:00"
+- PASS — rejects timestamp "tomorrow"
+- PASS — rejects timestamp "2026-02-30T00:00:00Z"
+- PASS — rejects timestamp "2027-02-29T00:00:00Z"
+- PASS — rejects timestamp "2026-13-01T00:00:00Z"
+- PASS — rejects timestamp "2026-11-10T24:00:00Z"
+- PASS — rejects timestamp "2026-11-10T10:60:00Z"
+- PASS — rejects timestamp "2026-11-10T10:00:60Z"
+- PASS — rejects timestamp "2026-11-10T10:00:00+25:00"
+- PASS — rejects timestamp "2026-11-10 10:00:00Z"
+- PASS — rejects timestamp ""
+- PASS — rejects timestamp null
+- PASS — rejects timestamp 12345
+- PASS — precision classification
+- PASS — nanosecond remainder is preserved as an integer string
+- PASS — OTel ns converts without float loss
+- PASS — OTel rejects non-numeric and unsafe JSON numbers
+- PASS — OTel timeUnixNano "0" means unset and falls back to observed time with a warning
+- PASS — event time wins over observed time and both are kept
+- PASS — event ids are stable and content-addressed
+- PASS — rejects non-object events
+- PASS — rejects missing timestamp
+- PASS — OTel attribute arrays are flattened
+- PASS — metric value captured from numeric value field
+- PASS — extra CSV-style columns become dimensions
+- PASS — prototype pollution keys do not alter Object
+- PASS — deeply nested attributes are truncated, not recursed forever
+- PASS — CSV quoting, commas, escaped quotes and CRLF
+- PASS — CSV handles BOM and embedded newline
+- PASS — CSV rejects unclosed quote
+- PASS — JSONL reports the failing line number
+- PASS — loads mixed JSONL+CSV, sorted by instant
+- PASS — every event carries source hash, file and record
+- PASS — fixture secrets are redacted in loaded events
+- PASS — quality reports mixed offsets for the fixture
+- PASS — parses OTLP resourceLogs with service name and severity
+- PASS — identical timestamps sort deterministically by source then record
+- PASS — cross-file duplicates are dropped and reported
+- PASS — same-file repeats are kept (separate occurrences)
+- PASS — malformed record is an ingestion error, valid ones survive
+- PASS — an unparseable file is reported, other files still load
+- PASS — input with no valid events throws
+- PASS — unsupported extensions are skipped and reported
+- PASS — rejects oversized file
+- PASS — enforces the event limit
+- PASS — rejects a directory with too many files
+- PASS — missing input path fails clearly
+- PASS — skips nested symlinks and records them
+- PASS — rejects a symlink given directly as input
+- PASS — benchmark has 26 case families, each with expectations
+- PASS — every benchmark case passes
+- PASS — benchmark detects a deliberately wrong expectation
+- PASS — automated audit passes on this repository
+- PASS — audit renders MD and HTML with every check and an honest disclaimer
+- PASS — audit fails when a required file is missing (negative control)
+- PASS — mini schema validator catches type, const, enum, pattern, required and nested errors
+- PASS — manifest lists 20 unique agents with matching skill and role files
+- PASS — skills directory contains exactly the manifest skills
+- PASS — incidentsutra-prime: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-timeline-builder: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-trace-correlator: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-change-detector: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-hypothesis-tester: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-postmortem-writer: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-metric-analyst: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-log-sentinel: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-alert-triage: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-dependency-map: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-blast-radius: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-runbook-match: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-evidence-ledger: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-privacy-guardian: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-comms-drafter: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-slo-guardian: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-recovery-planner: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-incident-auditor: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-ide-bridge: valid frontmatter, required sections and guardrails
+- PASS — incidentsutra-connector-architect: valid frontmatter, required sections and guardrails
+- PASS — skills are role specific, not one template with a swapped line
+- PASS — generated skills are in sync with scripts/build-skills.mjs
+- PASS — plugin manifest version matches package.json
+- PASS — compatibility matrix never marks host activation as tested without evidence
+- PASS — redacts bearer token
+- PASS — redacts password kv
+- PASS — redacts authorization header
+- PASS — redacts email
+- PASS — redacts aws access key
+- PASS — redacts github token
+- PASS — redacts stripe-style key
+- PASS — redacts jwt
+- PASS — redacts url credentials
+- PASS — redacts private key
+- PASS — redacts ipv4 address
+- PASS — redacts credit card (luhn)
+- PASS — redacts us ssn
+- PASS — redacts phone number
+- PASS — redaction counts are tracked by kind
+- PASS — authorization header value is fully masked (no dangling scheme)
+- PASS — benign text is preserved
+- PASS — non-Luhn long numbers are not treated as cards
+- PASS — sensitive object keys are masked at any depth
+- PASS — secrets inside arrays are masked
+- PASS — secrets in service, type and message fields are masked
+- PASS — redaction is idempotent
+- PASS — redaction survives very long hostile input quickly
+- PASS — no secret from the corpus reaches JSON, Markdown, HTML or postmortem outputs
+- PASS — prompt-injection payloads change nothing and verify cleanly
+- PASS — hostile markup is escaped in HTML
+- PASS — product code never spawns processes, opens outbound sockets or evaluates dynamic code
+- PASS — policy file denies network, exec, remote writes and auto-mitigation
+- PASS — package has zero dependencies
+- PASS — requires a strong token
+- PASS — binds to loopback only
+- PASS — rejects missing and wrong credentials
+- PASS — serves authorised endpoints as JSON
+- PASS — ignores query strings and trailing slashes
+- PASS — blocks every write verb
+- PASS — does not expose arbitrary or traversal paths
+- PASS — rejects forged Host headers (DNS rebinding)
+- PASS — sets hardening headers

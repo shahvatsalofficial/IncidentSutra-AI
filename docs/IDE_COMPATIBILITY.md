@@ -1,0 +1,2 @@
+# Host compatibility
+The canonical format is Agent Skills SKILL.md. Project-local copying is implemented for Claude (`.claude/skills`), Cursor (`.cursor/skills`), Codex (`.agents/skills`), Gemini (`.gemini/skills`), and Copilot (`.github/skills`). These are folder-copy adapters, not proof of runtime activation. Validate actual discovery, skill invocation and tool permission handling in each IDE/version and record evidence before marking verified. Sequential fallback is supported by reading each skill manually. Server mode does not provide model inference.

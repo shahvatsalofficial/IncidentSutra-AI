@@ -1,0 +1,203 @@
+{
+  "schema": "incidentsutra.audit.v1",
+  "tool": {
+    "name": "incidentsutra",
+    "version": "0.2.0",
+    "ruleVersion": "2026.11-r2"
+  },
+  "nature": "automated self-audit by the project; not a third-party certification",
+  "verdict": "PASS_WITH_NOTES",
+  "counts": {
+    "total": 20,
+    "pass": 19,
+    "fail": 0,
+    "skipped": 1,
+    "warn": 0
+  },
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "checks": [
+    {
+      "id": "A01",
+      "area": "agents",
+      "title": "Agent manifest, skills and Claude role files agree (20 roles)",
+      "status": "pass",
+      "detail": "20 manifest entries, 20 SKILL.md files, 20 role files; frontmatter and 7 required sections present in each",
+      "evidence": [
+        "agents=20"
+      ]
+    },
+    {
+      "id": "A02",
+      "area": "agents",
+      "title": "Every skill forbids autonomous production action and defers to humans",
+      "status": "pass",
+      "detail": "all 20 skills contain the no-autonomy, human-owner and untrusted-input rules",
+      "evidence": []
+    },
+    {
+      "id": "A03",
+      "area": "contracts",
+      "title": "Schemas parse; generated report and every event validate",
+      "status": "pass",
+      "detail": "report + 9 events + agent contract validate",
+      "evidence": []
+    },
+    {
+      "id": "A04",
+      "area": "determinism",
+      "title": "Identical input produces an identical report ID and bytes",
+      "status": "pass",
+      "detail": "reportId inc_d40c3ac52b6f2f4d2893",
+      "evidence": []
+    },
+    {
+      "id": "A05",
+      "area": "acceptance",
+      "title": "Spec acceptance: time zones sort, correlation stays unconfirmed, absent metrics stay unknown, claims cite sources",
+      "status": "pass",
+      "detail": "{\"sorted\":true,\"mixedOffsetsPresent\":true,\"unconfirmed\":true,\"claimsCiteSources\":true,\"absentMetricsUnknown\":true}",
+      "evidence": []
+    },
+    {
+      "id": "A06",
+      "area": "privacy",
+      "title": "Redaction corpus: 14 synthetic secret classes never reach any output",
+      "status": "pass",
+      "detail": "14/14 masked in JSON, Markdown, HTML, postmortem, register and JSONL; 0 redactions applied",
+      "evidence": [
+        "known gaps: IPv6 addresses; personal names and free-text identifiers; street addresses; secrets without a recognizable prefix or key name; non-US phone and national-ID formats; secrets split across fields"
+      ]
+    },
+    {
+      "id": "A07",
+      "area": "security",
+      "title": "Hostile markup is escaped in HTML and cannot break Markdown tables",
+      "status": "pass",
+      "detail": "rawTags=false, csp=true, brokenMarkdownRows=0",
+      "evidence": []
+    },
+    {
+      "id": "A08",
+      "area": "security",
+      "title": "Prompt-injection corpus (6 payloads): no state change, nothing executed",
+      "status": "pass",
+      "detail": "decision=HUMAN_REVIEW_REQUIRED; executedFlags=false; verifies=true",
+      "evidence": []
+    },
+    {
+      "id": "A09",
+      "area": "security",
+      "title": "Static scan: no process spawn, outbound network, eval or dynamic code in product code",
+      "status": "pass",
+      "detail": "10 source files scanned; node:http confined to packages/server",
+      "evidence": []
+    },
+    {
+      "id": "A10",
+      "area": "integrity",
+      "title": "Tampering with a report is detected by verification",
+      "status": "pass",
+      "detail": "6/6 mutations detected; untouched report verifies",
+      "evidence": []
+    },
+    {
+      "id": "A11",
+      "area": "server",
+      "title": "Local API: loopback only, bearer required, GET only, host-checked, allowlisted paths",
+      "status": "pass",
+      "detail": "{\"addr\":\"127.0.0.1\",\"noAuth\":401,\"wrongAuth\":401,\"ok\":200,\"notFound\":404,\"post\":405,\"hostBad\":403,\"weakTokenRejected\":true}",
+      "evidence": []
+    },
+    {
+      "id": "A12",
+      "area": "ingest",
+      "title": "Input limits and timestamp strictness",
+      "status": "pass",
+      "detail": "oversizeRejected=true; invalidTimestampsRejected=6/6; leapDayAccepted=true; maxEvents=5000",
+      "evidence": []
+    },
+    {
+      "id": "A13",
+      "area": "ingest",
+      "title": "Symlinks are never followed",
+      "status": "skipped",
+      "detail": "host forbids symlink creation (EPERM); covered on Linux/macOS CI",
+      "evidence": []
+    },
+    {
+      "id": "A14",
+      "area": "algorithm",
+      "title": "Synthetic benchmark: 26 case families",
+      "status": "pass",
+      "detail": "26/26 cases, 36/36 expectations. self-authored synthetic labels; not independently validated; measures internal consistency, not real-world accuracy",
+      "evidence": []
+    },
+    {
+      "id": "A15",
+      "area": "legal",
+      "title": "Licence, notices and policy files present and consistent",
+      "status": "pass",
+      "detail": "Apache-2.0 text verified; 0 runtime dependencies; all policy files present",
+      "evidence": []
+    },
+    {
+      "id": "A16",
+      "area": "legal",
+      "title": "Documentation does not overclaim (security, accuracy, compliance, readiness)",
+      "status": "pass",
+      "detail": "95 documents scanned; no unqualified overclaims",
+      "evidence": []
+    },
+    {
+      "id": "A17",
+      "area": "secrets",
+      "title": "No credentials committed to the repository",
+      "status": "pass",
+      "detail": "pattern scan (GitHub, AWS, Slack, npm tokens, private keys) found nothing outside intentional synthetic fixtures",
+      "evidence": []
+    },
+    {
+      "id": "A18",
+      "area": "supply-chain",
+      "title": "Zero runtime and dev dependencies; engines and bin declared",
+      "status": "pass",
+      "detail": "dependencies=0; engines.node=>=20; bin=packages/cli/index.mjs",
+      "evidence": []
+    },
+    {
+      "id": "A19",
+      "area": "safety",
+      "title": "Read-only policy file denies network, exec, mutation and auto-mitigation",
+      "status": "pass",
+      "detail": "{\"mode\":\"read-only\",\"network\":false,\"exec\":false,\"remoteWrite\":false,\"autoMitigation\":false}",
+      "evidence": []
+    },
+    {
+      "id": "A20",
+      "area": "safety",
+      "title": "Redaction helper handles nested secrets and keeps benign data",
+      "status": "pass",
+      "detail": "{\"authorization\":\"[REDACTED]\",\"nested\":{\"apiKey\":\"[REDACTED]\",\"list\":[\"ok\",\"token=[REDACTED]\"]},\"latency_ms\":220,\"note\":\"v2.7.0 deployed\"}",
+      "evidence": []
+    }
+  ],
+  "knownRedactionGaps": [
+    "IPv6 addresses",
+    "personal names and free-text identifiers",
+    "street addresses",
+    "secrets without a recognizable prefix or key name",
+    "non-US phone and national-ID formats",
+    "secrets split across fields"
+  ],
+  "limitations": [
+    "Checks are written by the same project they audit; they find regressions, not unknown unknowns.",
+    "Benchmark labels are synthetic and self-authored; no accuracy or precision claim is made.",
+    "No real production telemetry, live connector, or multi-tenant server was exercised.",
+    "Host IDE skill activation (Claude Code, Cursor, Codex, Gemini CLI, Copilot) is untested by this audit.",
+    "A passing audit is not a certification of security, privacy compliance or production readiness."
+  ]
+}

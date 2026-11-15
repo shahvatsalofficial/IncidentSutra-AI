@@ -1,0 +1,61 @@
+{
+  "schema": "incidentsutra.provenance.v1",
+  "reportId": "inc_99fa10f9907907d99a60",
+  "tool": {
+    "name": "incidentsutra",
+    "version": "0.2.0",
+    "ruleVersion": "2026.11-r2"
+  },
+  "inputs": [
+    {
+      "file": "deployments.csv",
+      "sha256": "529732004d8da13a70b348e7ae95d315fee0018cab187e0df49f3ad1dd7789ad",
+      "records": 1,
+      "parsed": true
+    },
+    {
+      "file": "observations.jsonl",
+      "sha256": "31a737fee9d579b9173ffeb3ea2cb37d957b4dce92e54085ff896a85d122be05",
+      "records": 8,
+      "parsed": true
+    }
+  ],
+  "outputs": [
+    {
+      "file": "incident-report.json",
+      "sha256": "1962c9b1eddfe5036354275caec3a7e22938e00d491f523391d3b7d19597a237",
+      "bytes": 37801
+    },
+    {
+      "file": "incident-report.md",
+      "sha256": "d4ce744fadf28c0c26099d006f33fa0c69d890d8e6ba25cdcc377cf20a4cfa41",
+      "bytes": 9337
+    },
+    {
+      "file": "incident-report.html",
+      "sha256": "ddd138181f4212ac6bc10a071fb59753e3be72a0c206c26f8d5f2a24c1db1344",
+      "bytes": 21903
+    },
+    {
+      "file": "normalized-events.jsonl",
+      "sha256": "ebd1a92a213a48e6625a69f6efd1e88e065347fac810adcc15756a8f14d2c44c",
+      "bytes": 6539
+    },
+    {
+      "file": "incident-timeline.json",
+      "sha256": "22219289b147203f608c9cea112d4bbe979793585516d0b2c117c6a1a138080b",
+      "bytes": 4150
+    },
+    {
+      "file": "hypothesis-register.md",
+      "sha256": "a7778e43f743e6863fe6bd869525d4a6e3277600a957a7c482424b495472a58d",
+      "bytes": 3181
+    },
+    {
+      "file": "postmortem-draft.md",
+      "sha256": "477ac12fbe89821ea5ff320e50e0fee1096629137e6f59850b8d388b4aacac1b",
+      "bytes": 3039
+    }
+  ],
+  "notice": "SHA-256 hashes detect accidental change. They are not a signature, attestation or chain of custody."
+}

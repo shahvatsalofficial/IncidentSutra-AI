@@ -1,0 +1,166 @@
+{
+  "schema": "incidentsutra.agents.v1",
+  "creator": "Vatsal Shah",
+  "agents": [
+    {
+      "id": "incidentsutra-prime",
+      "title": "Chief incident evidence orchestrator",
+      "description": "Coordinate the incident investigation, assign scoped evidence tasks, check every claim for provenance, and route operational decisions to human owners.",
+      "skill": "skills/incidentsutra-prime/SKILL.md",
+      "claude": "agents/incidentsutra-prime.md",
+      "backing": "cli: analyze, verify, audit"
+    },
+    {
+      "id": "incidentsutra-timeline-builder",
+      "title": "Multi-source UTC timeline",
+      "description": "Normalize mixed time zones, order observed events, detect gaps and preserve source IDs without changing meaning.",
+      "skill": "skills/incidentsutra-timeline-builder/SKILL.md",
+      "claude": "agents/incidentsutra-timeline-builder.md",
+      "backing": "cli: analyze (timeline, quality)"
+    },
+    {
+      "id": "incidentsutra-trace-correlator",
+      "title": "Trace and span investigations",
+      "description": "Link known trace/span identifiers across services, reject speculative joins and identify unresolved trace gaps.",
+      "skill": "skills/incidentsutra-trace-correlator/SKILL.md",
+      "claude": "agents/incidentsutra-trace-correlator.md",
+      "backing": "guidance-only (traceId and spanId are captured by the CLI; joins are manual)"
+    },
+    {
+      "id": "incidentsutra-change-detector",
+      "title": "Deployment and change analysis",
+      "description": "Compare release/change windows with observed alerts, show temporal relationships and competing pre-existing incident signals.",
+      "skill": "skills/incidentsutra-change-detector/SKILL.md",
+      "claude": "agents/incidentsutra-change-detector.md",
+      "backing": "cli: analyze (temporal-correlation, latent-defect hypotheses)"
+    },
+    {
+      "id": "incidentsutra-hypothesis-tester",
+      "title": "Competing explanations and falsification",
+      "description": "Propose multiple candidate explanations, cite supporting and contradictory events, request diagnostics, never declare unobserved root cause.",
+      "skill": "skills/incidentsutra-hypothesis-tester/SKILL.md",
+      "claude": "agents/incidentsutra-hypothesis-tester.md",
+      "backing": "cli: analyze (hypotheses, diagnostics)"
+    },
+    {
+      "id": "incidentsutra-postmortem-writer",
+      "title": "Blameless incident learning",
+      "description": "Produce stakeholder-reviewable postmortems, impact timelines, detection gaps, evidence and corrective actions without assigning individual blame.",
+      "skill": "skills/incidentsutra-postmortem-writer/SKILL.md",
+      "claude": "agents/incidentsutra-postmortem-writer.md",
+      "backing": "cli: analyze (postmortem-draft.md)"
+    },
+    {
+      "id": "incidentsutra-metric-analyst",
+      "title": "Metric and SLO evidence",
+      "description": "Identify p50/p95/p99, saturation, error budgets and traffic context when supplied; mark absent metric coverage and avoid unsupported calculations.",
+      "skill": "skills/incidentsutra-metric-analyst/SKILL.md",
+      "claude": "agents/incidentsutra-metric-analyst.md",
+      "backing": "cli: analyze (metricSeries)"
+    },
+    {
+      "id": "incidentsutra-log-sentinel",
+      "title": "Log integrity and signal extraction",
+      "description": "Parse log formats, normalize severity and correlate within permitted scope; minimize sensitive log retention.",
+      "skill": "skills/incidentsutra-log-sentinel/SKILL.md",
+      "claude": "agents/incidentsutra-log-sentinel.md",
+      "backing": "cli: analyze (ingestionErrors, skippedInputs, duplicatesDropped)"
+    },
+    {
+      "id": "incidentsutra-alert-triage",
+      "title": "Alert quality and priority",
+      "description": "Separate real impact indicators from noisy alerts and duplicates; never suppress or disable alerting automatically.",
+      "skill": "skills/incidentsutra-alert-triage/SKILL.md",
+      "claude": "agents/incidentsutra-alert-triage.md",
+      "backing": "cli: analyze (alertStorms)"
+    },
+    {
+      "id": "incidentsutra-dependency-map",
+      "title": "Dependency and provider context",
+      "description": "Map known upstream/downstream service relationships from supplied evidence; mark assumptions, vendor statuses and undocumented dependencies.",
+      "skill": "skills/incidentsutra-dependency-map/SKILL.md",
+      "claude": "agents/incidentsutra-dependency-map.md",
+      "backing": "guidance-only (the CLI detects dependency wording, not topology)"
+    },
+    {
+      "id": "incidentsutra-blast-radius",
+      "title": "Impact and customer scope",
+      "description": "Identify affected services, regions and workflows where observed; do not infer customer count or financial impact without inputs.",
+      "skill": "skills/incidentsutra-blast-radius/SKILL.md",
+      "claude": "agents/incidentsutra-blast-radius.md",
+      "backing": "guidance-only (the CLI lists affected services; customer impact needs external data)"
+    },
+    {
+      "id": "incidentsutra-runbook-match",
+      "title": "Safe runbook guidance",
+      "description": "Find appropriate documented incident runbooks, classify commands by permissions and side effects; default to recommendation only.",
+      "skill": "skills/incidentsutra-runbook-match/SKILL.md",
+      "claude": "agents/incidentsutra-runbook-match.md",
+      "backing": "guidance-only (templates and workflows are provided; matching is manual)"
+    },
+    {
+      "id": "incidentsutra-evidence-ledger",
+      "title": "Provenance and reproducibility",
+      "description": "Validate event IDs, file hashes, report integrity, evidence links and decision logs; block ungrounded or tampered claims.",
+      "skill": "skills/incidentsutra-evidence-ledger/SKILL.md",
+      "claude": "agents/incidentsutra-evidence-ledger.md",
+      "backing": "cli: verify (digest, references, source re-hash)"
+    },
+    {
+      "id": "incidentsutra-privacy-guardian",
+      "title": "Privacy, secret minimization and redaction",
+      "description": "Review PII, tokens, auth details, customer data and incident exports, fail safely when redaction is incomplete and require permission before outbound sharing.",
+      "skill": "skills/incidentsutra-privacy-guardian/SKILL.md",
+      "claude": "agents/incidentsutra-privacy-guardian.md",
+      "backing": "cli: redact, analyze (privacy)"
+    },
+    {
+      "id": "incidentsutra-comms-drafter",
+      "title": "Incident communications",
+      "description": "Draft clear internal/status-page updates with verified impact and uncertainty, never transmit externally without explicit approval.",
+      "skill": "skills/incidentsutra-comms-drafter/SKILL.md",
+      "claude": "agents/incidentsutra-comms-drafter.md",
+      "backing": "guidance-only (drafts text; the CLI sends nothing)"
+    },
+    {
+      "id": "incidentsutra-slo-guardian",
+      "title": "Service level objectives and error budgets",
+      "description": "Analyze supplied SLI/SLO series and burn rates, show sampling gaps and only report observed measurements.",
+      "skill": "skills/incidentsutra-slo-guardian/SKILL.md",
+      "claude": "agents/incidentsutra-slo-guardian.md",
+      "backing": "guidance-only (the CLI exposes raw series; burn-rate math needs supplied targets)"
+    },
+    {
+      "id": "incidentsutra-recovery-planner",
+      "title": "Human-controlled mitigation and recovery",
+      "description": "Develop non-destructive diagnostic and rollback checklists; do not execute production actions, changes, or restarts.",
+      "skill": "skills/incidentsutra-recovery-planner/SKILL.md",
+      "claude": "agents/incidentsutra-recovery-planner.md",
+      "backing": "cli: analyze (diagnostics catalogue, read-only)"
+    },
+    {
+      "id": "incidentsutra-incident-auditor",
+      "title": "Independent methodology and security audit",
+      "description": "Review causality language, timing assumptions, privacy, role boundaries, evidence completeness and reproducibility.",
+      "skill": "skills/incidentsutra-incident-auditor/SKILL.md",
+      "claude": "agents/incidentsutra-incident-auditor.md",
+      "backing": "cli: audit, benchmark"
+    },
+    {
+      "id": "incidentsutra-ide-bridge",
+      "title": "Cross-IDE Agent Skills compatibility",
+      "description": "Maintain portable SKILL.md contracts, project-local installs and tested host-specific invocation instructions. Untested is not unsupported or verified.",
+      "skill": "skills/incidentsutra-ide-bridge/SKILL.md",
+      "claude": "agents/incidentsutra-ide-bridge.md",
+      "backing": "cli: skills list, skills install"
+    },
+    {
+      "id": "incidentsutra-connector-architect",
+      "title": "Read-only telemetry connector architecture",
+      "description": "Plan least-privilege observability connectors with pagination, bounded query windows, safe auth, masking, retry budgets and audit logs.",
+      "skill": "skills/incidentsutra-connector-architect/SKILL.md",
+      "claude": "agents/incidentsutra-connector-architect.md",
+      "backing": "guidance-only (no live connector exists; see docs/TOOL_AND_PLUGIN_CATALOG.md)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "incidentsutra.compatibility.v1",
+  "note": "copy = the installer copies SKILL.md into the host's project-local skills folder (tested in CI). activation = the host actually discovers and invokes the skill (never claimed without evidence).",
+  "hosts": [
+    {"host": "Claude Code", "path": ".claude/skills", "copy": "tested", "activation": "not-tested", "evidence": null},
+    {"host": "Cursor", "path": ".cursor/skills", "copy": "tested", "activation": "not-tested", "evidence": null},
+    {"host": "Codex CLI / IDE", "path": ".agents/skills", "copy": "tested", "activation": "not-tested", "evidence": null},
+    {"host": "Gemini CLI", "path": ".gemini/skills", "copy": "tested", "activation": "not-tested", "evidence": null},
+    {"host": "GitHub Copilot / VS Code", "path": ".github/skills", "copy": "tested", "activation": "not-tested", "evidence": null},
+    {"host": "Windsurf", "path": null, "copy": "unsupported", "activation": "unsupported", "evidence": null},
+    {"host": "Kiro", "path": null, "copy": "unsupported", "activation": "unsupported", "evidence": null}
+  ],
+  "runtimes": [
+    {"os": "ubuntu-latest", "node": ["20", "22", "24"], "ci": "configured"},
+    {"os": "windows-latest", "node": ["20", "22", "24"], "ci": "configured"},
+    {"os": "macos-latest", "node": ["24"], "ci": "configured"}
+  ]
+}

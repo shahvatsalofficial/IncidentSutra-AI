@@ -1,0 +1,18 @@
+{
+  "policy": "incidentsutra-default-v1",
+  "mode": "read-only",
+  "network": false,
+  "exec": false,
+  "remoteWrite": false,
+  "autoMitigation": false,
+  "statusPagePublishing": false,
+  "approvalRequired": [
+    "liveQuery",
+    "externalExport",
+    "productionDiagnostics",
+    "mutation",
+    "rollout",
+    "rollback",
+    "globalInstall"
+  ]
+}

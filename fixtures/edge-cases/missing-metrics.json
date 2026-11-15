@@ -1,0 +1,1 @@
+{"events":[{"timestamp":"2026-11-10T20:00:00Z","type":"error","service":"billing","severity":"error","message":"Billing request failed"},{"timestamp":"2026-11-10T20:01:00Z","type":"deploy","service":"billing","severity":"info","message":"Billing deployed after error"}]}

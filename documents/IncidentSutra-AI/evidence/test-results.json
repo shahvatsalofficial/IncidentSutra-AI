@@ -1,0 +1,787 @@
+{
+  "schema": "incidentsutra.test-evidence/v1",
+  "command": "node --test",
+  "exitCode": 0,
+  "total": 192,
+  "pass": 192,
+  "fail": 0,
+  "skipped": 0,
+  "durationMs": 34816,
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64",
+    "commit": "uncommitted"
+  },
+  "skippedReason": "Two symlink tests return early when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.",
+  "cases": [
+    {
+      "name": "creates a timestamp-sorted observed timeline",
+      "status": "pass"
+    },
+    {
+      "name": "never claims causality: all hypotheses unconfirmed, confidence undetermined, review pending",
+      "status": "pass"
+    },
+    {
+      "name": "a deployment near the alert stays correlation only",
+      "status": "pass"
+    },
+    {
+      "name": "pre-existing error before the later deployment is recorded as counter-evidence",
+      "status": "pass"
+    },
+    {
+      "name": "fixture offers at least two competing explanation families",
+      "status": "pass"
+    },
+    {
+      "name": "dependency signal after onset is flagged as possible effect",
+      "status": "pass"
+    },
+    {
+      "name": "each hypothesis has falsifiable content and unexecuted read-only checks",
+      "status": "pass"
+    },
+    {
+      "name": "absent metrics are unknown, not fabricated",
+      "status": "pass"
+    },
+    {
+      "name": "missing traces and changes are flagged",
+      "status": "pass"
+    },
+    {
+      "name": "mixed offsets produce an explicit clock-skew gap",
+      "status": "pass"
+    },
+    {
+      "name": "numeric metric series are summarised from observed values only",
+      "status": "pass"
+    },
+    {
+      "name": "no production operation is represented as run",
+      "status": "pass"
+    },
+    {
+      "name": "reusable agent contract is complete and validates",
+      "status": "pass"
+    },
+    {
+      "name": "claims separate observed, inferred, unknown and not-run",
+      "status": "pass"
+    },
+    {
+      "name": "every hypothesis reference exists in the event evidence",
+      "status": "pass"
+    },
+    {
+      "name": "report validates against the v2 schema",
+      "status": "pass"
+    },
+    {
+      "name": "stable report IDs for identical input",
+      "status": "pass"
+    },
+    {
+      "name": "report ID changes when the window changes",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on summary tamper",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on unknown evidence reference",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on forced confirmed root cause",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on approved decision",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on claimed production mutation",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on forged event text",
+      "status": "pass"
+    },
+    {
+      "name": "verification fails on timeline pointing nowhere",
+      "status": "pass"
+    },
+    {
+      "name": "verification rejects non-reports",
+      "status": "pass"
+    },
+    {
+      "name": "legacy v1 schema id is still recognised",
+      "status": "pass"
+    },
+    {
+      "name": "source re-hash passes for untouched input and fails for changed input",
+      "status": "pass"
+    },
+    {
+      "name": "markdown report has evidence IDs, human approval and legend",
+      "status": "pass"
+    },
+    {
+      "name": "postmortem draft is blameless and leaves human sections open",
+      "status": "pass"
+    },
+    {
+      "name": "hypothesis register lists reviewer decision placeholders",
+      "status": "pass"
+    },
+    {
+      "name": "HTML report escapes untrusted text and carries a CSP with no script",
+      "status": "pass"
+    },
+    {
+      "name": "HTML report is accessible: lang, viewport, landmarks, svg title, skip of colour-only meaning",
+      "status": "pass"
+    },
+    {
+      "name": "synthetic flag appears only when requested",
+      "status": "pass"
+    },
+    {
+      "name": "markdown table cells cannot be broken by pipes or newlines",
+      "status": "pass"
+    },
+    {
+      "name": "comparison recognises added, removed and same-content events",
+      "status": "pass"
+    },
+    {
+      "name": "comparing a report with itself reports no change",
+      "status": "pass"
+    },
+    {
+      "name": "rejects an out-of-range correlation window",
+      "status": "pass"
+    },
+    {
+      "name": "requires at least one event",
+      "status": "pass"
+    },
+    {
+      "name": "no incident signals yields only the unknown-cause hypothesis",
+      "status": "pass"
+    },
+    {
+      "name": "alert storms are detected",
+      "status": "pass"
+    },
+    {
+      "name": "rollback counts as a change",
+      "status": "pass"
+    },
+    {
+      "name": "--version prints the package version",
+      "status": "pass"
+    },
+    {
+      "name": "help lists every command",
+      "status": "pass"
+    },
+    {
+      "name": "doctor reports offline, key-free operation and honest gaps",
+      "status": "pass"
+    },
+    {
+      "name": "skills list shows all 20 roles",
+      "status": "pass"
+    },
+    {
+      "name": "unknown command exits 1",
+      "status": "pass"
+    },
+    {
+      "name": "analyze requires --input and --out",
+      "status": "pass"
+    },
+    {
+      "name": "analyze rejects a non-numeric window",
+      "status": "pass"
+    },
+    {
+      "name": "analyze writes MD, HTML, JSON, postmortem, register, JSONL, timeline and provenance",
+      "status": "pass"
+    },
+    {
+      "name": "analyze output is byte-identical across runs",
+      "status": "pass"
+    },
+    {
+      "name": "analyze --synthetic labels the HTML report",
+      "status": "pass"
+    },
+    {
+      "name": "analyze writes ingestion-errors.json when records are rejected",
+      "status": "pass"
+    },
+    {
+      "name": "verify fails (exit 2) on a tampered report",
+      "status": "pass"
+    },
+    {
+      "name": "verify --input detects changed source telemetry",
+      "status": "pass"
+    },
+    {
+      "name": "compare works on two verified reports and rejects invalid ones",
+      "status": "pass"
+    },
+    {
+      "name": "redact preview prints counts but never raw values",
+      "status": "pass"
+    },
+    {
+      "name": "benchmark passes all 26 cases",
+      "status": "pass"
+    },
+    {
+      "name": "audit passes, writes JSON, MD and HTML",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer requires host and project",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer rejects unknown hosts",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer installs 20 skills project-locally for claude",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer installs 20 skills project-locally for cursor",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer installs 20 skills project-locally for codex",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer installs 20 skills project-locally for gemini",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer installs 20 skills project-locally for copilot",
+      "status": "pass"
+    },
+    {
+      "name": "skill installer refuses to overwrite",
+      "status": "pass"
+    },
+    {
+      "name": "serve requires a strong token and a valid report",
+      "status": "pass"
+    },
+    {
+      "name": "normalizes +05:30 to UTC",
+      "status": "pass"
+    },
+    {
+      "name": "normalizes negative offsets",
+      "status": "pass"
+    },
+    {
+      "name": "midnight rollover across the date line",
+      "status": "pass"
+    },
+    {
+      "name": "accepts a leap day",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-11T01:15:00\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"tomorrow\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-02-30T00:00:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2027-02-29T00:00:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-13-01T00:00:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-10T24:00:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-10T10:60:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-10T10:00:60Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-10T10:00:00+25:00\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"2026-11-10 10:00:00Z\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp \"\"",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp null",
+      "status": "pass"
+    },
+    {
+      "name": "rejects timestamp 12345",
+      "status": "pass"
+    },
+    {
+      "name": "precision classification",
+      "status": "pass"
+    },
+    {
+      "name": "nanosecond remainder is preserved as an integer string",
+      "status": "pass"
+    },
+    {
+      "name": "OTel ns converts without float loss",
+      "status": "pass"
+    },
+    {
+      "name": "OTel rejects non-numeric and unsafe JSON numbers",
+      "status": "pass"
+    },
+    {
+      "name": "OTel timeUnixNano \"0\" means unset and falls back to observed time with a warning",
+      "status": "pass"
+    },
+    {
+      "name": "event time wins over observed time and both are kept",
+      "status": "pass"
+    },
+    {
+      "name": "event ids are stable and content-addressed",
+      "status": "pass"
+    },
+    {
+      "name": "rejects non-object events",
+      "status": "pass"
+    },
+    {
+      "name": "rejects missing timestamp",
+      "status": "pass"
+    },
+    {
+      "name": "OTel attribute arrays are flattened",
+      "status": "pass"
+    },
+    {
+      "name": "metric value captured from numeric value field",
+      "status": "pass"
+    },
+    {
+      "name": "extra CSV-style columns become dimensions",
+      "status": "pass"
+    },
+    {
+      "name": "prototype pollution keys do not alter Object",
+      "status": "pass"
+    },
+    {
+      "name": "deeply nested attributes are truncated, not recursed forever",
+      "status": "pass"
+    },
+    {
+      "name": "CSV quoting, commas, escaped quotes and CRLF",
+      "status": "pass"
+    },
+    {
+      "name": "CSV handles BOM and embedded newline",
+      "status": "pass"
+    },
+    {
+      "name": "CSV rejects unclosed quote",
+      "status": "pass"
+    },
+    {
+      "name": "JSONL reports the failing line number",
+      "status": "pass"
+    },
+    {
+      "name": "loads mixed JSONL+CSV, sorted by instant",
+      "status": "pass"
+    },
+    {
+      "name": "every event carries source hash, file and record",
+      "status": "pass"
+    },
+    {
+      "name": "fixture secrets are redacted in loaded events",
+      "status": "pass"
+    },
+    {
+      "name": "quality reports mixed offsets for the fixture",
+      "status": "pass"
+    },
+    {
+      "name": "parses OTLP resourceLogs with service name and severity",
+      "status": "pass"
+    },
+    {
+      "name": "identical timestamps sort deterministically by source then record",
+      "status": "pass"
+    },
+    {
+      "name": "cross-file duplicates are dropped and reported",
+      "status": "pass"
+    },
+    {
+      "name": "same-file repeats are kept (separate occurrences)",
+      "status": "pass"
+    },
+    {
+      "name": "malformed record is an ingestion error, valid ones survive",
+      "status": "pass"
+    },
+    {
+      "name": "an unparseable file is reported, other files still load",
+      "status": "pass"
+    },
+    {
+      "name": "input with no valid events throws",
+      "status": "pass"
+    },
+    {
+      "name": "unsupported extensions are skipped and reported",
+      "status": "pass"
+    },
+    {
+      "name": "rejects oversized file",
+      "status": "pass"
+    },
+    {
+      "name": "enforces the event limit",
+      "status": "pass"
+    },
+    {
+      "name": "rejects a directory with too many files",
+      "status": "pass"
+    },
+    {
+      "name": "missing input path fails clearly",
+      "status": "pass"
+    },
+    {
+      "name": "skips nested symlinks and records them",
+      "status": "pass"
+    },
+    {
+      "name": "rejects a symlink given directly as input",
+      "status": "pass"
+    },
+    {
+      "name": "benchmark has 26 case families, each with expectations",
+      "status": "pass"
+    },
+    {
+      "name": "every benchmark case passes",
+      "status": "pass"
+    },
+    {
+      "name": "benchmark detects a deliberately wrong expectation",
+      "status": "pass"
+    },
+    {
+      "name": "automated audit passes on this repository",
+      "status": "pass"
+    },
+    {
+      "name": "audit renders MD and HTML with every check and an honest disclaimer",
+      "status": "pass"
+    },
+    {
+      "name": "audit fails when a required file is missing (negative control)",
+      "status": "pass"
+    },
+    {
+      "name": "mini schema validator catches type, const, enum, pattern, required and nested errors",
+      "status": "pass"
+    },
+    {
+      "name": "manifest lists 20 unique agents with matching skill and role files",
+      "status": "pass"
+    },
+    {
+      "name": "skills directory contains exactly the manifest skills",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-prime: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-timeline-builder: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-trace-correlator: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-change-detector: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-hypothesis-tester: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-postmortem-writer: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-metric-analyst: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-log-sentinel: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-alert-triage: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-dependency-map: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-blast-radius: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-runbook-match: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-evidence-ledger: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-privacy-guardian: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-comms-drafter: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-slo-guardian: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-recovery-planner: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-incident-auditor: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-ide-bridge: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "incidentsutra-connector-architect: valid frontmatter, required sections and guardrails",
+      "status": "pass"
+    },
+    {
+      "name": "skills are role specific, not one template with a swapped line",
+      "status": "pass"
+    },
+    {
+      "name": "generated skills are in sync with scripts/build-skills.mjs",
+      "status": "pass"
+    },
+    {
+      "name": "plugin manifest version matches package.json",
+      "status": "pass"
+    },
+    {
+      "name": "compatibility matrix never marks host activation as tested without evidence",
+      "status": "pass"
+    },
+    {
+      "name": "redacts bearer token",
+      "status": "pass"
+    },
+    {
+      "name": "redacts password kv",
+      "status": "pass"
+    },
+    {
+      "name": "redacts authorization header",
+      "status": "pass"
+    },
+    {
+      "name": "redacts email",
+      "status": "pass"
+    },
+    {
+      "name": "redacts aws access key",
+      "status": "pass"
+    },
+    {
+      "name": "redacts github token",
+      "status": "pass"
+    },
+    {
+      "name": "redacts stripe-style key",
+      "status": "pass"
+    },
+    {
+      "name": "redacts jwt",
+      "status": "pass"
+    },
+    {
+      "name": "redacts url credentials",
+      "status": "pass"
+    },
+    {
+      "name": "redacts private key",
+      "status": "pass"
+    },
+    {
+      "name": "redacts ipv4 address",
+      "status": "pass"
+    },
+    {
+      "name": "redacts credit card (luhn)",
+      "status": "pass"
+    },
+    {
+      "name": "redacts us ssn",
+      "status": "pass"
+    },
+    {
+      "name": "redacts phone number",
+      "status": "pass"
+    },
+    {
+      "name": "redaction counts are tracked by kind",
+      "status": "pass"
+    },
+    {
+      "name": "authorization header value is fully masked (no dangling scheme)",
+      "status": "pass"
+    },
+    {
+      "name": "benign text is preserved",
+      "status": "pass"
+    },
+    {
+      "name": "non-Luhn long numbers are not treated as cards",
+      "status": "pass"
+    },
+    {
+      "name": "sensitive object keys are masked at any depth",
+      "status": "pass"
+    },
+    {
+      "name": "secrets inside arrays are masked",
+      "status": "pass"
+    },
+    {
+      "name": "secrets in service, type and message fields are masked",
+      "status": "pass"
+    },
+    {
+      "name": "redaction is idempotent",
+      "status": "pass"
+    },
+    {
+      "name": "redaction survives very long hostile input quickly",
+      "status": "pass"
+    },
+    {
+      "name": "no secret from the corpus reaches JSON, Markdown, HTML or postmortem outputs",
+      "status": "pass"
+    },
+    {
+      "name": "prompt-injection payloads change nothing and verify cleanly",
+      "status": "pass"
+    },
+    {
+      "name": "hostile markup is escaped in HTML",
+      "status": "pass"
+    },
+    {
+      "name": "product code never spawns processes, opens outbound sockets or evaluates dynamic code",
+      "status": "pass"
+    },
+    {
+      "name": "policy file denies network, exec, remote writes and auto-mitigation",
+      "status": "pass"
+    },
+    {
+      "name": "package has zero dependencies",
+      "status": "pass"
+    },
+    {
+      "name": "requires a strong token",
+      "status": "pass"
+    },
+    {
+      "name": "binds to loopback only",
+      "status": "pass"
+    },
+    {
+      "name": "rejects missing and wrong credentials",
+      "status": "pass"
+    },
+    {
+      "name": "serves authorised endpoints as JSON",
+      "status": "pass"
+    },
+    {
+      "name": "ignores query strings and trailing slashes",
+      "status": "pass"
+    },
+    {
+      "name": "blocks every write verb",
+      "status": "pass"
+    },
+    {
+      "name": "does not expose arbitrary or traversal paths",
+      "status": "pass"
+    },
+    {
+      "name": "rejects forged Host headers (DNS rebinding)",
+      "status": "pass"
+    },
+    {
+      "name": "sets hardening headers",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shahvatsalofficial/IncidentSutra-AI/schemas/incident-report.schema.json",
+  "title": "IncidentSutra incident report v2",
+  "type": "object",
+  "required": ["schema", "reportId", "mode", "summary", "sources", "events", "timeline", "hypotheses", "contradictions", "gaps", "claims", "quality", "privacy", "contract", "decision", "checks", "methodology"],
+  "properties": {
+    "schema": {"const": "incidentsutra.report.v2"},
+    "reportId": {"type": "string", "pattern": "^inc_[0-9a-f]{20}$"},
+    "mode": {"const": "offline-read-only"},
+    "synthetic": {"type": "boolean"},
+    "tool": {"type": "object", "required": ["name", "version", "ruleVersion"]},
+    "summary": {"type": "object", "required": ["count", "services", "deployments", "errorsAndAlerts", "metrics", "start", "end"]},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["file", "sha256", "records"]}},
+    "events": {"type": "array", "items": {"type": "object", "required": ["id", "timestamp", "source"]}},
+    "timeline": {"type": "array", "items": {"type": "object", "required": ["timestamp", "eventId", "verification"], "properties": {"verification": {"const": "observed"}}}},
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "kind", "family", "status", "confidence", "reviewStatus", "supportingEventIds", "contradictingEventIds", "diagnostics"],
+        "properties": {
+          "status": {"const": "unconfirmed"},
+          "confidence": {"const": "undetermined"},
+          "reviewStatus": {"const": "pending_human_review"},
+          "diagnostics": {"type": "array", "items": {"type": "object", "required": ["id", "class", "executed", "permission"], "properties": {"class": {"const": "read-only"}, "executed": {"const": false}}}}
+        }
+      }
+    },
+    "contradictions": {"type": "array"},
+    "gaps": {"type": "array", "items": {"type": "object", "required": ["kind", "status", "message"], "properties": {"status": {"const": "unknown"}}}},
+    "claims": {"type": "object", "required": ["observed", "inferred", "unknown", "notRun"]},
+    "quality": {"type": "object", "required": ["utcOffsets", "timePrecisions", "clockSkew"]},
+    "privacy": {"type": "object", "required": ["redactions", "policy"]},
+    "contract": {"type": "object", "required": ["scope", "observed", "inferred", "unknowns", "notRun", "evidenceIds", "contradictions", "nextChecks", "permissionsRequired", "privacyReview", "humanApproval"]},
+    "decision": {"type": "object", "required": ["status", "reason"], "properties": {"status": {"const": "HUMAN_REVIEW_REQUIRED"}}},
+    "checks": {"type": "object", "required": ["rootCause", "productionDiagnostics", "productionMutations"], "properties": {"rootCause": {"const": "unconfirmed"}, "productionDiagnostics": {"const": "not_run"}, "productionMutations": {"const": "not_run"}}},
+    "methodology": {"type": "object", "required": ["correlationWindowMinutes", "causalInference"], "properties": {"causalInference": {"const": "none"}}}
+  }
+}

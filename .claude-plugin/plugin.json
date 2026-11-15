@@ -1,0 +1,10 @@
+{
+  "name": "incidentsutra",
+  "version": "0.2.0",
+  "description": "20 evidence-first incident investigation skills (timeline, change analysis, hypotheses, privacy, audit) by Vatsal Shah. Read-only; never executes production actions.",
+  "author": {"name": "Vatsal Shah", "url": "https://github.com/shahvatsalofficial"},
+  "homepage": "https://github.com/shahvatsalofficial/IncidentSutra-AI",
+  "repository": "https://github.com/shahvatsalofficial/IncidentSutra-AI",
+  "license": "Apache-2.0",
+  "keywords": ["incident-response", "sre", "postmortem", "observability", "agent-skills"]
+}

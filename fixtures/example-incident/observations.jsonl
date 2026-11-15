@@ -1,0 +1,8 @@
+{"timestamp":"2026-11-10T19:40:00Z","type":"metric","service":"checkout","severity":"info","message":"Baseline checkout p95 latency 220ms, error rate 0.1%","attributes":{"p95_ms":220,"error_rate_pct":0.1}}
+{"timestamp":"2026-11-11T01:15:00+05:30","type":"deploy","service":"checkout","severity":"info","message":"Checkout release 2.7.0 rollout started","deploymentId":"checkout-2.7.0"}
+{"timestamp":"2026-11-10T19:49:00Z","type":"error","service":"checkout","severity":"error","message":"Intermittent checkout payment dependency timeout before second deployment","traceId":"trace-first-fault"}
+{"timestamp":"2026-11-10T19:52:00Z","type":"deploy","service":"checkout","severity":"info","message":"Checkout release 2.7.1 rolled out","deploymentId":"checkout-2.7.1"}
+{"timestamp":"2026-11-10T19:54:00Z","type":"alert","service":"checkout","severity":"critical","message":"Checkout error budget burn above threshold"}
+{"timestamp":"2026-11-10T19:55:00Z","type":"metric","service":"checkout","severity":"warning","message":"Checkout p95 latency 2100ms, error rate 8%","attributes":{"p95_ms":2100,"error_rate_pct":8.0}}
+{"timestamp":"2026-11-10T19:56:00Z","type":"error","service":"checkout","severity":"error","message":"Payment gateway timeout; bearer sk_live_test_AbCd1234567890Token should be hidden; contact jane@example.org","traceId":"trace-second-fault"}
+{"timestamp":"2026-11-10T20:02:00Z","type":"log","service":"payments","severity":"warning","message":"External payment processor increased latency"}

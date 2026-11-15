@@ -1,0 +1,414 @@
+{
+  "schema": "incidentsutra.benchmark.v1",
+  "cases": 26,
+  "casesPassed": 26,
+  "expectations": 36,
+  "expectationsPassed": 36,
+  "labelProvenance": "self-authored synthetic labels; not independently validated; measures internal consistency, not real-world accuracy",
+  "results": [
+    {
+      "id": "C01",
+      "family": "deploy-then-errors",
+      "title": "Errors begin after a deployment",
+      "events": 2,
+      "durationMs": 15,
+      "checks": [
+        {
+          "name": "temporal-correlation hypothesis present",
+          "ok": true
+        },
+        {
+          "name": "no hypothesis confirmed",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C02",
+      "family": "errors-before-deploy",
+      "title": "Errors precede the deployment",
+      "events": 2,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "pre-change errors recorded as contradiction",
+          "ok": true
+        },
+        {
+          "name": "latent-defect hypothesis offered",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C03",
+      "family": "unrelated-deploy",
+      "title": "Only an unrelated service deployed",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "no temporal-correlation hypothesis for api",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C04",
+      "family": "mixed-timezones",
+      "title": "+05:30 and Z events sort by instant",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "16:00+05:30 (=10:30Z) sorts after the 10:20Z error",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C05",
+      "family": "midnight-rollover",
+      "title": "Offset crosses the UTC date line",
+      "events": 2,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "01:00+05:30 equals 19:30Z on the previous UTC day",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C06",
+      "family": "no-metrics",
+      "title": "No metrics supplied",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "missing_metrics gap is unknown",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C07",
+      "family": "no-traces",
+      "title": "No trace IDs supplied",
+      "events": 1,
+      "durationMs": 3,
+      "checks": [
+        {
+          "name": "missing_traces gap present",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C08",
+      "family": "no-errors",
+      "title": "Only informational events",
+      "events": 1,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "only insufficient-evidence hypothesis",
+          "ok": true
+        },
+        {
+          "name": "missing_incident_signals gap",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C09",
+      "family": "dependency-timeout",
+      "title": "Upstream timeout message",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "dependency-failure hypothesis present",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C10",
+      "family": "saturation",
+      "title": "CPU and memory pressure",
+      "events": 1,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "resource-saturation hypothesis present",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C11",
+      "family": "datastore",
+      "title": "Database pool exhaustion",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "datastore-issue hypothesis present",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C12",
+      "family": "alert-storm",
+      "title": "Ten alerts in two minutes",
+      "events": 10,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "alert storm detected",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C13",
+      "family": "identical-timestamps",
+      "title": "Identical timestamps keep a stable order",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "order is deterministic across runs",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C14",
+      "family": "deploy-outside-window",
+      "title": "Deployment 60 minutes before errors",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "no temporal-correlation inside default 15 min window",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C15",
+      "family": "deploy-after-errors",
+      "title": "Deployment only after errors",
+      "events": 2,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "deployment hypothesis lists no_errors_after_change",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C16",
+      "family": "multi-service",
+      "title": "Two services fail",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "alternative explanation per service",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C17",
+      "family": "otel-nanoseconds",
+      "title": "Nanosecond OTel timestamps keep sub-ms order",
+      "events": 2,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "earlier nanosecond sorts first",
+          "ok": true
+        },
+        {
+          "name": "precision flagged ns",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C18",
+      "family": "rollback-event",
+      "title": "Rollback counts as a change",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "rollback treated as deployment",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C19",
+      "family": "prompt-injection",
+      "title": "Log tells the assistant to run commands",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "nothing confirmed",
+          "ok": true
+        },
+        {
+          "name": "decision still human review",
+          "ok": true
+        },
+        {
+          "name": "no production action recorded",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C20",
+      "family": "unicode-service",
+      "title": "Unicode and emoji service names",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "report verifies",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C21",
+      "family": "metric-only",
+      "title": "Metrics without incident signals",
+      "events": 1,
+      "durationMs": 1,
+      "checks": [
+        {
+          "name": "metric series observed",
+          "ok": true
+        },
+        {
+          "name": "insufficient-evidence only",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C22",
+      "family": "severity-only",
+      "title": "Critical severity without error type",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "counted as an error/alert signal",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C23",
+      "family": "volume",
+      "title": "2000 events analyse within budget",
+      "events": 2000,
+      "durationMs": 114,
+      "checks": [
+        {
+          "name": "report verifies",
+          "ok": true
+        },
+        {
+          "name": "2000 events retained",
+          "ok": true
+        },
+        {
+          "name": "within 5000 ms budget",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C24",
+      "family": "window-parameter",
+      "title": "Narrow window excludes a 10 minute gap",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "no temporal-correlation with 5 min window",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C25",
+      "family": "latent-defect",
+      "title": "Errors with no change records",
+      "events": 1,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "latent-defect offered",
+          "ok": true
+        },
+        {
+          "name": "missing_changes gap",
+          "ok": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "C26",
+      "family": "simultaneous",
+      "title": "Deployment and first error share a timestamp",
+      "events": 2,
+      "durationMs": 0,
+      "checks": [
+        {
+          "name": "error counted after the change (no pre-change contradiction)",
+          "ok": true
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

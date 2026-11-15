@@ -1,0 +1,10 @@
+IncidentSutra AI
+Copyright 2026 Vatsal Shah
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This product contains no third-party runtime code and has zero npm dependencies.
+Third-party names (OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Jaeger, Sentry,
+Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot and others) appear only as
+references in documentation and belong to their respective owners. No affiliation,
+sponsorship or endorsement is claimed.

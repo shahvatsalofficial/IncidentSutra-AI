@@ -1,0 +1,1 @@
+{"resourceLogs":[{"resource":{"attributes":[{"key":"service.name","value":{"stringValue":"gateway"}}]},"scopeLogs":[{"logRecords":[{"timeUnixNano":"1794354000000000000","severityNumber":17,"severityText":"ERROR","body":{"stringValue":"Gateway upstream error"},"traceId":"abcdef"}]}]}]}

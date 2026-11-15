@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shahvatsalofficial/IncidentSutra-AI/schemas/agent-output.schema.json",
+  "title": "IncidentSutra reusable agent output contract",
+  "type": "object",
+  "required": ["scope", "observed", "inferred", "unknowns", "notRun", "evidenceIds", "contradictions", "nextChecks", "permissionsRequired", "privacyReview", "humanApproval"],
+  "properties": {
+    "scope": {"type": "object"},
+    "observed": {"type": "array"},
+    "inferred": {"type": "array"},
+    "unknowns": {"type": "array"},
+    "notRun": {"type": "array"},
+    "evidenceIds": {"type": "array", "items": {"type": "string", "pattern": "^evt_[0-9a-f]{20}$"}},
+    "contradictions": {"type": "array"},
+    "nextChecks": {"type": "array"},
+    "permissionsRequired": {"type": "array", "items": {"type": "string"}},
+    "privacyReview": {"enum": ["pending_human_review", "passed", "blocked"]},
+    "humanApproval": {"enum": ["required", "granted", "denied"]}
+  }
+}

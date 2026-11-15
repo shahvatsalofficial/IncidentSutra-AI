@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shahvatsalofficial/IncidentSutra-AI/schemas/incident-event.schema.json",
+  "title": "IncidentSutra normalized incident event v2",
+  "type": "object",
+  "required": ["id", "schema", "timestamp", "timestampNs", "timePrecision", "type", "service", "severity", "confidenceClass", "ingestionWarnings", "source"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^evt_[0-9a-f]{20}$"},
+    "schema": {"const": "incidentsutra.event.v2"},
+    "timestamp": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{3}Z$"},
+    "timestampNs": {"type": "string", "pattern": "^[0-9]+$"},
+    "timePrecision": {"enum": ["s", "ms", "us", "ns"]},
+    "timeBasis": {"enum": ["event", "observed"]},
+    "originalTimestamp": {"type": "string"},
+    "originalOffset": {"type": "string"},
+    "observedTimestamp": {"type": "string"},
+    "type": {"type": "string"},
+    "eventType": {"type": "string"},
+    "service": {"type": "string"},
+    "environment": {"type": "string"},
+    "severity": {"type": "string"},
+    "message": {"type": "string"},
+    "traceId": {"type": "string"},
+    "spanId": {"type": "string"},
+    "deployment": {"type": "string"},
+    "releaseId": {"type": "string"},
+    "metricValue": {"type": "number"},
+    "attributes": {"type": "object"},
+    "dimensions": {"type": "object"},
+    "confidenceClass": {"const": "observed"},
+    "sensitivityClass": {"type": "string"},
+    "ingestionWarnings": {"type": "array", "items": {"type": "string"}},
+    "source": {
+      "type": "object",
+      "required": ["file", "record", "sha256"],
+      "properties": {"file": {"type": "string"}, "record": {"type": "number"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    }
+  }
+}

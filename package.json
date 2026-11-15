@@ -1,0 +1,31 @@
+{
+  "name": "incidentsutra",
+  "version": "0.2.0",
+  "description": "IncidentSutra AI: offline, read-only incident evidence CLI. Builds auditable UTC timelines and competing hypotheses from logs, metrics and deployments, with MD/HTML/JSON reports, an automated audit and 20 portable agent skills for Claude Code, Cursor, Codex, Gemini CLI and Copilot.",
+  "keywords": ["incident-response", "sre", "postmortem", "observability", "root-cause-analysis", "timeline", "opentelemetry", "on-call", "blameless", "agent-skills", "claude-code", "cursor", "codex", "gemini-cli", "copilot", "ai-agents", "offline", "privacy", "cli"],
+  "license": "Apache-2.0",
+  "author": "Vatsal Shah <https://github.com/shahvatsalofficial>",
+  "homepage": "https://github.com/shahvatsalofficial/IncidentSutra-AI#readme",
+  "repository": {"type": "git", "url": "git+https://github.com/shahvatsalofficial/IncidentSutra-AI.git"},
+  "bugs": {"url": "https://github.com/shahvatsalofficial/IncidentSutra-AI/issues"},
+  "type": "module",
+  "main": "packages/core/analyze.mjs",
+  "exports": {".": "./packages/core/analyze.mjs", "./ingest": "./packages/core/ingest.mjs", "./cli": "./packages/cli/index.mjs"},
+  "bin": {"incidentsutra": "packages/cli/index.mjs"},
+  "engines": {"node": ">=20"},
+  "files": ["packages", "skills", "agents", "schemas", "policies", "rules", "workflows", "adapters", "templates", "fixtures", "examples", "docs", "documents/IncidentSutra-AI", ".claude-plugin", "scripts", "compatibility-matrix.json", "LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SUPPORT.md", "SECURITY.md", "CHANGELOG.md", "CITATION.cff", "llms.txt", "README.md", "AGENTS.md", "CLAUDE.md", "GEMINI.md", "GOVERNANCE.md", "ROADMAP.md"],
+  "scripts": {
+    "test": "node --test",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "audit": "node packages/cli/index.mjs audit --out artifacts/audit",
+    "benchmark": "node packages/cli/index.mjs benchmark",
+    "build:skills": "node scripts/build-skills.mjs",
+    "check:skills": "node scripts/build-skills.mjs --check",
+    "build:docs": "node scripts/build-docs.mjs",
+    "check:docs": "node scripts/build-docs.mjs --check",
+    "test:report": "node scripts/report-tests.mjs",
+    "check": "npm test && npm run check:skills && npm run check:docs"
+  },
+  "publishConfig": {"access": "public", "provenance": true}
+}
