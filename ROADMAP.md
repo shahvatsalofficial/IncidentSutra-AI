@@ -4,7 +4,7 @@ Honest status: **shipped** means implemented and covered by tests; **planned** m
 
 | Phase | Scope | Status |
 |---|---|---|
-| P0 | JSON/JSONL/CSV/OTLP-log ingest, UTC timeline, hypotheses, MD/HTML/JSON reports, verify, redaction, audit, benchmark, loopback API, skill installer | shipped (0.2.0) |
+| P0 | JSON/JSONL/CSV/OTLP-log ingest, UTC timeline, hypotheses, MD/HTML/JSON reports, verify, redaction, audit, benchmark, loopback API, skill installer | shipped (0.2.x) |
 | P1 | Prometheus *or* Loki read-only adapter with bounded queries and mock-server tests; IPv6 and configurable PII detectors; streaming ingest for larger files | planned |
 | P2 | OTel collector ingest, sampled-trace uncertainty, trace joins | planned |
 | P3 | Grafana, Sentry, Jaeger read-only connectors | planned |

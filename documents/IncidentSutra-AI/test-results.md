@@ -6,7 +6,7 @@ Command: `node --test`
 | --- | --- | --- | --- | --- |
 | 192 | 192 | 0 | 0 | 0 |
 
-Environment: Node v24.15.0, win32/x64, commit `uncommitted`.
+Environment: Node v24.15.0, win32/x64, commit `3bdcd65`.
 
 Skips: Two symlink tests return early when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.
 

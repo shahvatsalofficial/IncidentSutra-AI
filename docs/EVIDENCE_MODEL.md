@@ -1,4 +1,4 @@
-# Evidence model (v0.2.0)
+# Evidence model (v0.2.1)
 
 Every event is observed **only from user-supplied input**. Four classes are first-class in the report (`claims`):
 

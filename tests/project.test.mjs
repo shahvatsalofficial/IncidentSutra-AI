@@ -58,6 +58,7 @@ test('generated skills are in sync with scripts/build-skills.mjs', async () => {
 test('plugin manifest version matches package.json', () => {
   const p = JSON.parse(readFileSync('package.json', 'utf8')), c = JSON.parse(readFileSync('.claude-plugin/plugin.json', 'utf8'));
   assert.equal(c.version, p.version); assert.equal(c.name, 'incidentsutra');
+  assert.match(readFileSync('CITATION.cff', 'utf8'), new RegExp('^version: ' + p.version.replaceAll('.', '[.]'), 'm'));
 });
 test('compatibility matrix never marks host activation as tested without evidence', () => {
   const m = JSON.parse(readFileSync('compatibility-matrix.json', 'utf8'));

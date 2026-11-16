@@ -1,7 +1,7 @@
 # IncidentSutra AI — Incident Evidence Report
 
-**Report:** `inc_99fa10f9907907d99a60`  
-**Schema:** incidentsutra.report.v2 · **Tool:** undefined 0.2.0 · **Rules:** 2026.11-r2  
+**Report:** `inc_e95e3ae334e5f1390998`  
+**Schema:** incidentsutra.report.v2 · **Tool:** undefined 0.2.1 · **Rules:** 2026.11-r2  
 **Mode:** offline / read-only  
 **Review:** HUMAN_REVIEW_REQUIRED  
 **Data:** SYNTHETIC demonstration data  

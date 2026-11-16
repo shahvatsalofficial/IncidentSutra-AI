@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-11-16 — maintenance
+
+- CI and release workflows moved to the latest GitHub Action majors (checkout v7, setup-node v7, upload-artifact v7).
+- Version metadata (package, plugin manifest, citation, status docs) aligned at 0.2.1; first npm release was 0.2.0.
+- Evidence (tests, audit, benchmark, samples) regenerated for this version.
+
 ## 0.2.0 — 2026-11-11 — audit reports, hardening, public release
 
 **Added**

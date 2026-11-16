@@ -1,6 +1,6 @@
 # IncidentSutra AI — Automated Audit Report
 
-**Verdict:** PASS_WITH_NOTES · **Tool:** incidentsutra 0.2.0 (rules 2026.11-r2) · **Node:** v24.15.0 on win32/x64  
+**Verdict:** PASS_WITH_NOTES · **Tool:** incidentsutra 0.2.1 (rules 2026.11-r2) · **Node:** v24.15.0 on win32/x64  
 **Nature:** automated self-audit by the project; not a third-party certification
 
 | Checks | Pass | Fail | Skipped | Warn |
@@ -14,7 +14,7 @@
 | A01 | agents | Agent manifest, skills and Claude role files agree (20 roles) | **PASS** | 20 manifest entries, 20 SKILL.md files, 20 role files; frontmatter and 7 required sections present in each |
 | A02 | agents | Every skill forbids autonomous production action and defers to humans | **PASS** | all 20 skills contain the no-autonomy, human-owner and untrusted-input rules |
 | A03 | contracts | Schemas parse; generated report and every event validate | **PASS** | report + 9 events + agent contract validate |
-| A04 | determinism | Identical input produces an identical report ID and bytes | **PASS** | reportId inc_d40c3ac52b6f2f4d2893 |
+| A04 | determinism | Identical input produces an identical report ID and bytes | **PASS** | reportId inc_08ab6bbd890e21fe62bd |
 | A05 | acceptance | Spec acceptance: time zones sort, correlation stays unconfirmed, absent metrics stay unknown, claims cite sources | **PASS** | {"sorted":true,"mixedOffsetsPresent":true,"unconfirmed":true,"claimsCiteSources":true,"absentMetricsUnknown":true} |
 | A06 | privacy | Redaction corpus: 14 synthetic secret classes never reach any output | **PASS** | 14/14 masked in JSON, Markdown, HTML, postmortem, register and JSONL; 0 redactions applied |
 | A07 | security | Hostile markup is escaped in HTML and cannot break Markdown tables | **PASS** | rawTags=false, csp=true, brokenMarkdownRows=0 |
@@ -26,7 +26,7 @@
 | A13 | ingest | Symlinks are never followed | **SKIPPED** | host forbids symlink creation (EPERM); covered on Linux/macOS CI |
 | A14 | algorithm | Synthetic benchmark: 26 case families | **PASS** | 26/26 cases, 36/36 expectations. self-authored synthetic labels; not independently validated; measures internal consistency, not real-world accuracy |
 | A15 | legal | Licence, notices and policy files present and consistent | **PASS** | Apache-2.0 text verified; 0 runtime dependencies; all policy files present |
-| A16 | legal | Documentation does not overclaim (security, accuracy, compliance, readiness) | **PASS** | 95 documents scanned; no unqualified overclaims |
+| A16 | legal | Documentation does not overclaim (security, accuracy, compliance, readiness) | **PASS** | 105 documents scanned; no unqualified overclaims |
 | A17 | secrets | No credentials committed to the repository | **PASS** | pattern scan (GitHub, AWS, Slack, npm tokens, private keys) found nothing outside intentional synthetic fixtures |
 | A18 | supply-chain | Zero runtime and dev dependencies; engines and bin declared | **PASS** | dependencies=0; engines.node=>=20; bin=packages/cli/index.mjs |
 | A19 | safety | Read-only policy file denies network, exec, mutation and auto-mitigation | **PASS** | {"mode":"read-only","network":false,"exec":false,"remoteWrite":false,"autoMitigation":false} |

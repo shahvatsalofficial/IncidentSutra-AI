@@ -1,4 +1,4 @@
-# Threat model (v0.2.0)
+# Threat model (v0.2.1)
 
 Scope: the local CLI, the report generators and the loopback API. Live connectors and a team server do not exist yet.
 
