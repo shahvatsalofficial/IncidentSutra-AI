@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>IncidentSutra AI — offline incident evidence CLI and agent skills</title>
+<meta name="description" content="Offline, read-only incident investigation CLI. Auditable UTC timelines, competing root-cause hypotheses with counter-evidence, blameless postmortem drafts, MD/HTML/JSON reports and 20 agent skills for Claude Code, Cursor, Codex, Gemini CLI and Copilot.">
+<meta name="keywords" content="incident response, SRE, on-call, postmortem, root cause analysis, incident timeline, OpenTelemetry, agent skills, Claude Code, Cursor, Codex, Gemini CLI, Copilot, offline CLI">
+<link rel="canonical" href="https://shahvatsalofficial.github.io/IncidentSutra-AI/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IncidentSutra AI — observe precisely, reason cautiously, recover responsibly">
+<meta property="og:description" content="Offline, read-only incident evidence CLI with competing hypotheses, MD/HTML/JSON reports and 20 agent skills. Zero dependencies, no API key.">
+<meta property="og:url" content="https://shahvatsalofficial.github.io/IncidentSutra-AI/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"IncidentSutra AI","description":"Offline, read-only incident investigation CLI with auditable timelines, competing hypotheses and 20 portable agent skills.","codeRepository":"https://github.com/shahvatsalofficial/IncidentSutra-AI","programmingLanguage":"JavaScript","runtimePlatform":"Node.js 20+","license":"https://www.apache.org/licenses/LICENSE-2.0","author":{"@type":"Person","name":"Vatsal Shah","url":"https://github.com/shahvatsalofficial"},"url":"https://shahvatsalofficial.github.io/IncidentSutra-AI/"}</script>
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--fg:#14202e;--mut:#506072;--bd:#dbe3ec;--ac:#0b5c7a;--ok:#0f7a4d;--code:#eef2f6}
+@media(prefers-color-scheme:dark){:root{--bg:#0d141c;--card:#141e29;--fg:#e6edf5;--mut:#9db0c4;--bd:#243445;--ac:#6cc4e6;--ok:#52d39b;--code:#1a2735}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}code,pre{font:.88em ui-monospace,Consolas,monospace}
+code{background:var(--code);padding:.1em .35em;border-radius:5px}
+pre{background:var(--code);padding:14px;border-radius:10px;overflow:auto}pre code{background:none;padding:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,#0b3d52,#0b5c7a 60%,#12806f);color:#fff;padding:56px 0 48px}
+header.hero h1{margin:0 0 8px;font-size:2.4rem;line-height:1.15}
+header.hero p{margin:6px 0;font-size:1.1rem;max-width:720px;opacity:.95}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid #fff;color:#fff}
+.btn.primary{background:#fff;color:#0b3d52}
+nav.top{display:flex;flex-wrap:wrap;gap:6px 16px;padding:12px 0;font-size:.9rem}
+nav.top a{color:var(--mut);text-decoration:none}nav.top a:hover{color:var(--ac)}
+section{padding:28px 0}h2{font-size:1.5rem;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.card h3{margin:0 0 6px;font-size:1.02rem}.card p{margin:0;color:var(--mut);font-size:.93rem}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--card);font-size:.92rem}
+th,td{border:1px solid var(--bd);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid var(--bd);background:var(--card);font-size:.8rem;margin:2px}
+.note{border-left:4px solid var(--ac);background:var(--card);padding:10px 16px;border-radius:0 10px 10px 0;color:var(--mut)}
+footer{border-top:1px solid var(--bd);color:var(--mut);font-size:.85rem;padding:22px 0 48px}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+@media(max-width:640px){header.hero{padding:36px 0}header.hero h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>IncidentSutra AI</h1>
+<p><strong>Observe precisely. Reason cautiously. Recover responsibly.</strong></p>
+<p>An offline, read-only CLI that turns exported logs, metrics, alerts and deployments into an auditable UTC timeline, competing root-cause hypotheses with counter-evidence, and a blameless postmortem draft, as HTML, Markdown and JSON. Ships 20 portable agent skills.</p>
+<div class="btns">
+<a class="btn primary" href="docs/evidence/samples/incident-report.html">See a sample report</a>
+<a class="btn" href="docs/README.html">Read the docs</a>
+<a class="btn" href="https://github.com/shahvatsalofficial/IncidentSutra-AI">GitHub</a>
+<a class="btn" href="https://www.npmjs.com/package/incidentsutra">npm</a>
+</div>
+</div></header>
+<div class="wrap">
+<nav class="top" aria-label="Page"><a href="#start">Quick start</a><a href="#why">Why</a><a href="#proof">Proof</a><a href="#skills">Agent skills</a><a href="#limits">Limits</a><a href="#docs">Documentation</a></nav>
+
+<section id="start"><h2>Quick start</h2>
+<pre><code>npx incidentsutra analyze --input ./export --out ./report
+npx incidentsutra verify  --report ./report/incident-report.json
+npx incidentsutra audit   --out ./audit</code></pre>
+<p>Node.js 20 or newer. No API key, no network, no dependencies. Open <code>report/incident-report.html</code> in a browser.</p></section>
+
+<section id="why"><h2>What it does and refuses to do</h2>
+<div class="grid">
+<div class="card"><h3>Auditable timeline</h3><p>RFC3339 with explicit offsets only, sorted by instant, nanoseconds kept. Every fact has an evidence ID, source file, record and SHA-256.</p></div>
+<div class="card"><h3>Competing hypotheses</h3><p>Change, dependency, saturation, datastore, latent defect, unknown. Each lists what must be true, what contradicts it and what would disprove it.</p></div>
+<div class="card"><h3>Unknown stays unknown</h3><p>Missing metrics, traces and change records are reported as gaps, never filled in. Confidence stays undetermined.</p></div>
+<div class="card"><h3>Never touches production</h3><p>No network client, no process spawn, no eval in product code. Diagnostics are listed read-only and marked not run.</p></div>
+<div class="card"><h3>Three report formats</h3><p>Single-file HTML (no scripts, strict CSP, light and dark), Markdown and JSON, plus a blameless postmortem draft.</p></div>
+<div class="card"><h3>Privacy first</h3><p>Best-effort masking of common secrets and personal data with counts. Published gaps. Not DLP: sanitize upstream.</p></div>
+</div></section>
+
+<section id="proof"><h2>Proof, reproducible</h2>
+<div class="tw"><table>
+<thead><tr><th>Evidence</th><th>Result</th><th>Reproduce</th></tr></thead>
+<tbody>
+<tr><td>Automated tests</td><td>192 pass, 0 fail</td><td><code>npm test</code></td></tr>
+<tr><td>Self-audit</td><td>20 checks, <a href="docs/evidence/audit/audit-report.html">audit report</a></td><td><code>npx incidentsutra audit</code></td></tr>
+<tr><td>Synthetic benchmark</td><td>26 case families, 36 expectations</td><td><code>npx incidentsutra benchmark</code></td></tr>
+<tr><td>Redaction corpus</td><td>14 synthetic secret classes masked</td><td>audit A06</td></tr>
+<tr><td>Prompt-injection corpus</td><td>6 hostile payloads change nothing</td><td>audit A08</td></tr>
+<tr><td>Tamper detection</td><td>6 of 6 mutations caught</td><td>audit A10</td></tr>
+<tr><td>Dependencies</td><td>0 runtime, 0 dev</td><td><code>npm ls</code></td></tr>
+<tr><td>CI</td><td>Ubuntu and Windows (Node 20, 22, 24), macOS (Node 24)</td><td><a href="https://github.com/shahvatsalofficial/IncidentSutra-AI/actions">Actions</a></td></tr>
+</tbody></table></div>
+<p class="note">The audit is an automated self-audit, not a third-party certification. Benchmark labels are synthetic and author-written, so they show internal consistency, not real-world accuracy. Read the <a href="docs/07-independent-audit.html">full audit write-up</a>, including defects found and fixed.</p></section>
+
+<section id="skills"><h2>20 agent skills</h2>
+<p>Install project-locally for your AI coding tool; existing files are never overwritten.</p>
+<pre><code>npx incidentsutra skills install --host claude --project .</code></pre>
+<p><span class="pill">Claude Code</span><span class="pill">Cursor</span><span class="pill">Codex</span><span class="pill">Gemini CLI</span><span class="pill">GitHub Copilot</span></p>
+<p>Roles are instructions, not 20 running models: timeline builder, change detector, hypothesis tester, evidence ledger, privacy guardian, postmortem writer and more. Copying is tested; native activation in each IDE is not. See the <a href="docs/08-agent-catalog.html">agent catalogue</a>.</p></section>
+
+<section id="limits"><h2>Honest limits</h2>
+<ul>
+<li>Not an automatic root-cause engine and not a production incident controller.</li>
+<li>No live connectors yet (Prometheus, Loki, Grafana, Sentry, OTel Collector are planned).</li>
+<li>Redaction does not catch IPv6, personal names, addresses or unprefixed secrets.</li>
+<li>Advisory output for humans; not legal, compliance or security advice. Apache-2.0, provided as is.</li>
+</ul></section>
+
+<section id="docs"><h2>Documentation</h2>
+<div class="grid">
+<a class="card" href="docs/01-executive-summary.html"><h3>Executive summary</h3><p>Problem, value, trust summary.</p></a>
+<a class="card" href="docs/02-functional-spec.html"><h3>Functional spec</h3><p>Commands, inputs, outputs, hypothesis families.</p></a>
+<a class="card" href="docs/03-technical-spec.html"><h3>Technical spec</h3><p>Schemas, ordering, redaction, API.</p></a>
+<a class="card" href="docs/04-architecture.html"><h3>Architecture</h3><p>Data flow, boundaries, decisions.</p></a>
+<a class="card" href="docs/05-user-guide.html"><h3>User guide</h3><p>Step by step for on-call use.</p></a>
+<a class="card" href="docs/06-security-privacy-legal.html"><h3>Security, privacy, legal</h3><p>Posture, redaction, licence.</p></a>
+<a class="card" href="docs/07-independent-audit.html"><h3>Audit and evidence</h3><p>Defects found, checks, limits.</p></a>
+<a class="card" href="docs/test-results.html"><h3>Test results</h3><p>Machine-written, from a real run.</p></a>
+<a class="card" href="docs/09-faq.html"><h3>FAQ</h3><p>Quick answers.</p></a>
+</div></section>
+</div>
+<footer><div class="wrap">IncidentSutra AI · Apache-2.0 · Created by Vatsal Shah · <a href="https://github.com/shahvatsalofficial/IncidentSutra-AI">source</a> · <a href="https://www.npmjs.com/package/incidentsutra">npm</a> · Third-party names are trademarks of their owners; no affiliation is claimed.</div></footer>
+</body>
+</html>

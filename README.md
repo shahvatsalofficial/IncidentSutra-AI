@@ -10,7 +10,7 @@
 ![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen.svg)
 ![Node >=20](https://img.shields.io/badge/node-%3E%3D20-339933.svg)
 
-Created and maintained by **Vatsal Shah** ([@shahvatsalofficial](https://github.com/shahvatsalofficial)). No API key, no network, no telemetry, no dependencies.
+**Website:** https://shahvatsalofficial.github.io/IncidentSutra-AI/ · Created and maintained by **Vatsal Shah** ([@shahvatsalofficial](https://github.com/shahvatsalofficial)). No API key, no network, no telemetry, no dependencies.
 
 ---
 

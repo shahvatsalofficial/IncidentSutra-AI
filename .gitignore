@@ -6,3 +6,4 @@ coverage/
 *.log
 artifacts/
 *.tgz
+_site/
