@@ -2,7 +2,7 @@
 
 **Observe precisely. Reason cautiously. Recover responsibly.** Created by Vatsal Shah. Apache-2.0.
 
-This folder is the complete reference for IncidentSutra AI v0.2.1. Every page exists as Markdown (source) and HTML (generated, styled, light and dark, print-ready). Rebuild HTML with `npm run build:docs`; CI fails if it is stale.
+This folder is the complete reference for IncidentSutra AI v0.2.2. Every page exists as Markdown (source) and HTML (generated, styled, light and dark, print-ready). Rebuild HTML with `npm run build:docs`; CI fails if it is stale.
 
 ## Read in this order
 

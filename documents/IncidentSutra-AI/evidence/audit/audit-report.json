@@ -2,7 +2,7 @@
   "schema": "incidentsutra.audit.v1",
   "tool": {
     "name": "incidentsutra",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "ruleVersion": "2026.11-r2"
   },
   "nature": "automated self-audit by the project; not a third-party certification",
@@ -51,7 +51,7 @@
       "area": "determinism",
       "title": "Identical input produces an identical report ID and bytes",
       "status": "pass",
-      "detail": "reportId inc_08ab6bbd890e21fe62bd",
+      "detail": "reportId inc_7392e41d82c1045eee9b",
       "evidence": []
     },
     {
@@ -149,7 +149,7 @@
       "area": "legal",
       "title": "Documentation does not overclaim (security, accuracy, compliance, readiness)",
       "status": "pass",
-      "detail": "133 documents scanned; no unqualified overclaims",
+      "detail": "180 documents scanned; no unqualified overclaims",
       "evidence": []
     },
     {

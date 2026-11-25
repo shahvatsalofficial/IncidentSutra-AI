@@ -1,4 +1,4 @@
-# Implementation status (v0.2.1)
+# Implementation status (v0.2.2)
 
 Source of truth for what works. Test and audit numbers are machine-written to `documents/IncidentSutra-AI/test-results.md` and `evidence/`.
 

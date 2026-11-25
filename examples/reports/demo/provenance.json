@@ -1,9 +1,9 @@
 {
   "schema": "incidentsutra.provenance.v1",
-  "reportId": "inc_e95e3ae334e5f1390998",
+  "reportId": "inc_9f3d6ce70b16ee09374b",
   "tool": {
     "name": "incidentsutra",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "ruleVersion": "2026.11-r2"
   },
   "inputs": [
@@ -23,17 +23,17 @@
   "outputs": [
     {
       "file": "incident-report.json",
-      "sha256": "da6c4848e7a99873432c41dabe3ed5f7d353aa239ab8676e7f905db1398d592b",
+      "sha256": "feb850200e919a832b686f00586f109a2decb42da41c4eb5e6144974adfbaad6",
       "bytes": 37801
     },
     {
       "file": "incident-report.md",
-      "sha256": "4cb790ca632545a2fa1ad4009fa7a83703a305951dc8d7a7dd6b8b4831acba7b",
+      "sha256": "76a0c55c5705830d03ff0b59163ab804b2894402422e92584688b44a7331513b",
       "bytes": 9337
     },
     {
       "file": "incident-report.html",
-      "sha256": "30759402284779329fbea110d8834f4f8278f08e0e83d7331a1963d1569ffc9b",
+      "sha256": "e14721eb60ba59fb3c73e9e745c0d9b224db26087512766036b6e67c53667d14",
       "bytes": 22289
     },
     {
@@ -48,12 +48,12 @@
     },
     {
       "file": "hypothesis-register.md",
-      "sha256": "17a70822ae60d96daf18c32b6b51dfc37b89bf90a3c2705467735bbead3ee417",
+      "sha256": "e26bf4a99ffa3d73072abf6453c36cec557975d3078478d0d9ff8bf5918d59a5",
       "bytes": 3181
     },
     {
       "file": "postmortem-draft.md",
-      "sha256": "024c870ea99996289ce57fc830b04a879b3928b502d177a0a1fc78ada8242f7a",
+      "sha256": "d25f5c40d336d22cc641938d075c61fa5eb1927eb359876694bfb351e3c6e613",
       "bytes": 3039
     }
   ],
