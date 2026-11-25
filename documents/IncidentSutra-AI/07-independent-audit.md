@@ -50,13 +50,19 @@ Run `npx incidentsutra audit --out audit`. The committed run is in [`evidence/au
 | supply chain | A18 zero dependencies |
 | safety | A19 read-only policy, A20 redaction helper |
 
+<!-- chart:audit -->
+
 ## 4. Benchmark
 
 26 synthetic incident families, 36 expectations, all pass on the committed run ([`evidence/benchmark.json`](evidence/benchmark.json)). **Caveat:** labels are written by the author and not independently validated. The result shows internal consistency, not accuracy on real incidents. No precision or recall figure is claimed.
 
+<!-- chart:benchmark -->
+
 ## 5. Tests
 
 See [test-results.md](test-results.md): machine-written results from `npm run test:report`, including Node version, platform and commit. CI additionally runs the suite on Ubuntu and Windows (Node 20, 22, 24) and macOS (Node 24).
+
+<!-- chart:tests -->
 
 ## 6. Sample proof
 

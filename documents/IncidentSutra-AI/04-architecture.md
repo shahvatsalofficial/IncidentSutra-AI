@@ -8,6 +8,8 @@
 4. **Humans decide**: the decision field is fixed to `HUMAN_REVIEW_REQUIRED`.
 5. **Untrusted input**: logs, runbooks and tickets are data.
 
+<!-- svg:architecture -->
+
 ## Data flow
 
 ```
@@ -53,6 +55,10 @@ telemetry files (json / jsonl / csv / OTLP)
             |  human review
  [ decisions and actions ]    outside the tool
 ```
+
+<!-- svg:trust -->
+
+<!-- svg:evidence -->
 
 ## Evidence model
 

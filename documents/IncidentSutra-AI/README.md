@@ -15,7 +15,9 @@ This folder is the complete reference for IncidentSutra AI v0.2.1. Every page ex
 | Security, privacy, legal, compliance reviewers | [06 Security, privacy and legal](06-security-privacy-legal.md) |
 | Anyone deciding whether to trust it | [07 Independent audit and evidence](07-independent-audit.md), [Test results](test-results.md) |
 | People using AI coding tools | [08 Agent catalogue](08-agent-catalog.md) |
-| Quick answers | [09 FAQ](09-faq.md) |
+| Quick answers | [09 FAQ](09-faq.md), [Glossary](12-glossary.md) |
+| Anyone who prefers pictures | [Visual guide](11-visual-guide.md) |
+| Learning by example | [Real-world scenarios](10-real-world-scenarios.md) |
 
 ## Evidence folder
 

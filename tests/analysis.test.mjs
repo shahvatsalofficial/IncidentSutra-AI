@@ -131,7 +131,7 @@ test('HTML report escapes untrusted text and carries a CSP with no script', asyn
 });
 test('HTML report is accessible: lang, viewport, landmarks, svg title, skip of colour-only meaning', async () => {
   const h = toHTML(await get('fixtures/example-incident', {synthetic: true}));
-  assert.match(h, /<html lang="en"/); assert.match(h, /name="viewport"/); assert.match(h, /<svg role="img"/); assert.match(h, /<title id="tl-t">/); assert.match(h, /SYNTHETIC DATA/); assert.match(h, /prefers-color-scheme:dark/); assert.match(h, /@media print/);
+  assert.match(h, /<html lang="en"/); assert.match(h, /name="viewport"/); assert.match(h, /<svg role="img"/); assert.match(h, /<title id="tl-t">/); assert.match(h, /SYNTHETIC DATA/); assert.ok(h.includes(':has(#theme-dark:checked)')); assert.ok(!h.includes('prefers-color-scheme'), 'light is the default'); assert.match(h, /@media print/);
 });
 test('synthetic flag appears only when requested', async () => { assert.ok(!toHTML(await get('fixtures/example-incident')).includes('SYNTHETIC DATA')); });
 test('markdown table cells cannot be broken by pipes or newlines', () => {

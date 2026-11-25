@@ -48,7 +48,7 @@ Everything below is reproducible with one command. Numbers come from real runs, 
 
 | Evidence | Result | Reproduce |
 |---|---|---|
-| Automated tests (`node:test`) | 192 pass, 0 fail on Node 24 / Windows ([test-results](documents/IncidentSutra-AI/test-results.md)) | `npm test` |
+| Automated tests (`node:test`) | 200 pass, 0 fail on Node 24 / Windows ([test-results](documents/IncidentSutra-AI/test-results.md)) | `npm test` |
 | Automated self-audit | 20 checks, see [audit report](documents/IncidentSutra-AI/evidence/audit/audit-report.html) | `npx incidentsutra audit --out audit` |
 | Synthetic benchmark | 26 incident case families, see [07-independent-audit](documents/IncidentSutra-AI/07-independent-audit.md) | `npx incidentsutra benchmark` |
 | Redaction corpus | 14 synthetic secret classes, none leak into any output | audit check A06 |
@@ -114,7 +114,7 @@ Not implemented: live observability connectors (Prometheus, Loki, Grafana, Sentr
 ## Documentation
 
 Full documents live in [`documents/IncidentSutra-AI`](documents/IncidentSutra-AI/README.md), each as Markdown and styled HTML:
-[Executive summary](documents/IncidentSutra-AI/01-executive-summary.md) · [Functional spec](documents/IncidentSutra-AI/02-functional-spec.md) · [Technical spec](documents/IncidentSutra-AI/03-technical-spec.md) · [Architecture](documents/IncidentSutra-AI/04-architecture.md) · [User guide](documents/IncidentSutra-AI/05-user-guide.md) · [Security, privacy and legal](documents/IncidentSutra-AI/06-security-privacy-legal.md) · [Independent audit](documents/IncidentSutra-AI/07-independent-audit.md) · [Agent catalogue](documents/IncidentSutra-AI/08-agent-catalog.md) · [Test results](documents/IncidentSutra-AI/test-results.md) · [FAQ](documents/IncidentSutra-AI/09-faq.md).
+[Executive summary](documents/IncidentSutra-AI/01-executive-summary.md) · [Functional spec](documents/IncidentSutra-AI/02-functional-spec.md) · [Technical spec](documents/IncidentSutra-AI/03-technical-spec.md) · [Architecture](documents/IncidentSutra-AI/04-architecture.md) · [User guide](documents/IncidentSutra-AI/05-user-guide.md) · [Security, privacy and legal](documents/IncidentSutra-AI/06-security-privacy-legal.md) · [Independent audit](documents/IncidentSutra-AI/07-independent-audit.md) · [Agent catalogue](documents/IncidentSutra-AI/08-agent-catalog.md) · [Test results](documents/IncidentSutra-AI/test-results.md) · [FAQ](documents/IncidentSutra-AI/09-faq.md) · [Real-world scenarios](documents/IncidentSutra-AI/10-real-world-scenarios.md) · [Visual guide](documents/IncidentSutra-AI/11-visual-guide.md) · [Glossary](documents/IncidentSutra-AI/12-glossary.md).
 
 ## FAQ
 

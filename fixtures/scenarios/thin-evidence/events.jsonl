@@ -1,0 +1,3 @@
+{"timestamp":"2026-11-15T12:10:00+01:00","type":"incident","service":"portal","severity":"warning","message":"support: customer reports blank page"}
+{"timestamp":"2026-11-15T12:25:00+01:00","type":"incident","service":"portal","severity":"warning","message":"support: second customer reports blank page"}
+{"timestamp":"yesterday afternoon","type":"log","service":"portal","message":"someone saw errors"}

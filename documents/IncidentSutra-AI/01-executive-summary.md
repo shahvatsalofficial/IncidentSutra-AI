@@ -14,6 +14,8 @@ IncidentSutra AI is a command-line tool and a set of 20 agent skills. You give i
 4. a **blameless postmortem draft** with human-only sections left open;
 5. reports as **HTML, Markdown and JSON**, and an automated **audit report** of the tool itself.
 
+<!-- svg:pipeline -->
+
 ## What makes it different
 
 | Typical tooling | IncidentSutra AI |
@@ -23,6 +25,8 @@ IncidentSutra AI is a command-line tool and a set of 20 agent skills. You give i
 | Needs cloud and keys | Offline, zero dependencies, no API key |
 | Can act on production | Cannot: no network or process execution in product code |
 | Claims accuracy | Publishes limits; benchmark labelled synthetic and self-authored |
+
+<!-- flow:quick -->
 
 ## Business value
 

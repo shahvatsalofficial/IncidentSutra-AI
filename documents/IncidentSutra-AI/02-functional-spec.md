@@ -26,6 +26,8 @@ Limits: 2 MB per file, 5,000 events, 100 files, nesting depth 8, 80 keys per obj
 
 Time rules: RFC3339 with `Z` or `±HH:MM` only. Invalid calendar dates, hour 24, second 60 and offsets beyond 23:59 are rejected per record. Event time wins over collector observed time; observed-only events carry a warning. OTLP `timeUnixNano` of `0` means unset. Sub-millisecond precision is kept in `timestampNs`.
 
+<!-- svg:timezone -->
+
 ## Outputs of `analyze`
 
 | File | Content |
@@ -57,6 +59,8 @@ Hypothesis families, produced only when evidence supports them (the unknown fami
 | `insufficient-evidence` | always | n/a |
 
 Every hypothesis: `status: unconfirmed`, `confidence: undetermined`, `reviewStatus: pending_human_review`, `mustBeTrue`, supporting and contradicting evidence IDs, `disconfirmingObservations`, `knownGaps`, and `diagnostics` (read-only, `executed: false`, permission, cost, expected result).
+
+<!-- svg:hypothesis -->
 
 Other derived data: observed `metricSeries` (first, last, min, max), `alertStorms` (5 or more signals within 5 minutes), quality notes (offsets, precisions, clock skew **unassessed**), gaps (`missing_metrics`, `missing_incident_signals`, `missing_traces`, `missing_changes`, `invalid_records`, `mixed_time_offsets`, `skipped_inputs`).
 

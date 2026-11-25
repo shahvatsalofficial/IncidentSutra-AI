@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Documentation rebuilt as a website: light theme by default with a dark toggle, sidebar, search, mobile menu, diagrams, flowcharts, charts, visual guide, glossary and six runnable real-world scenarios.
+- HTML incident and audit reports now open in light theme, with a script-free dark toggle.
+
 ## 0.2.1 — 2026-11-16 — maintenance
 
 - CI and release workflows moved to the latest GitHub Action majors (checkout v7, setup-node v7, upload-artifact v7).

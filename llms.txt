@@ -17,6 +17,9 @@ It never confirms a root cause, never executes anything against production, and 
 - [Agent catalogue](documents/IncidentSutra-AI/08-agent-catalog.md)
 - [FAQ](documents/IncidentSutra-AI/09-faq.md)
 - [Observed test results](documents/IncidentSutra-AI/test-results.md)
+- [Real-world scenarios](documents/IncidentSutra-AI/10-real-world-scenarios.md): six runnable samples
+- [Visual guide](documents/IncidentSutra-AI/11-visual-guide.md)
+- [Glossary](documents/IncidentSutra-AI/12-glossary.md)
 
 ## Quick start
 - `npx incidentsutra analyze --input <dir> --out report`

@@ -1,0 +1,6 @@
+{"timestamp":"2026-11-10T09:55:00Z","type":"metric","service":"orders","message":"error rate baseline","attributes":{"error_rate_pct":0.2}}
+{"timestamp":"2026-11-10T10:02:00Z","type":"error","service":"orders","severity":"error","message":"order creation failed: null customer reference"}
+{"timestamp":"2026-11-10T10:06:00Z","type":"deploy","service":"orders","message":"orders release 4.2.0 rolled out","deploymentId":"orders-4.2.0"}
+{"timestamp":"2026-11-10T10:08:00Z","type":"error","service":"orders","severity":"error","message":"order creation failed: null customer reference"}
+{"timestamp":"2026-11-10T10:09:00Z","type":"alert","service":"orders","severity":"critical","message":"orders error rate above threshold"}
+{"timestamp":"2026-11-10T10:10:00Z","type":"metric","service":"orders","message":"error rate now","attributes":{"error_rate_pct":6.4}}

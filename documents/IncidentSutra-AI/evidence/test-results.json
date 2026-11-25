@@ -2,16 +2,16 @@
   "schema": "incidentsutra.test-evidence/v1",
   "command": "node --test",
   "exitCode": 0,
-  "total": 192,
-  "pass": 192,
+  "total": 200,
+  "pass": 200,
   "fail": 0,
   "skipped": 0,
-  "durationMs": 73835,
+  "durationMs": 39050,
   "environment": {
     "node": "v24.15.0",
     "platform": "win32",
     "arch": "x64",
-    "commit": "3bdcd65"
+    "commit": "4cb529d"
   },
   "skippedReason": "Two symlink tests return early when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.",
   "cases": [
@@ -285,6 +285,38 @@
     },
     {
       "name": "serve requires a strong token and a valid report",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 1: errors before the release are counter-evidence",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 2: converted offset puts the deploy first",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 3: dependency raised, no change hypothesis against search",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 4: release outside the window is not linked; datastore raised",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 5: one storm, saturation raised, secrets masked",
+      "status": "pass"
+    },
+    {
+      "name": "scenario 6: bad timestamp rejected and gaps stay unknown",
+      "status": "pass"
+    },
+    {
+      "name": "website is light by default with a dark toggle, search and mobile menu",
+      "status": "pass"
+    },
+    {
+      "name": "every wide diagram ships a narrow-screen version",
       "status": "pass"
     },
     {

@@ -26,7 +26,7 @@
 | A13 | ingest | Symlinks are never followed | **SKIPPED** | host forbids symlink creation (EPERM); covered on Linux/macOS CI |
 | A14 | algorithm | Synthetic benchmark: 26 case families | **PASS** | 26/26 cases, 36/36 expectations. self-authored synthetic labels; not independently validated; measures internal consistency, not real-world accuracy |
 | A15 | legal | Licence, notices and policy files present and consistent | **PASS** | Apache-2.0 text verified; 0 runtime dependencies; all policy files present |
-| A16 | legal | Documentation does not overclaim (security, accuracy, compliance, readiness) | **PASS** | 105 documents scanned; no unqualified overclaims |
+| A16 | legal | Documentation does not overclaim (security, accuracy, compliance, readiness) | **PASS** | 133 documents scanned; no unqualified overclaims |
 | A17 | secrets | No credentials committed to the repository | **PASS** | pattern scan (GitHub, AWS, Slack, npm tokens, private keys) found nothing outside intentional synthetic fixtures |
 | A18 | supply-chain | Zero runtime and dev dependencies; engines and bin declared | **PASS** | dependencies=0; engines.node=>=20; bin=packages/cli/index.mjs |
 | A19 | safety | Read-only policy file denies network, exec, mutation and auto-mitigation | **PASS** | {"mode":"read-only","network":false,"exec":false,"remoteWrite":false,"autoMitigation":false} |

@@ -13,7 +13,7 @@
   "exports": {".": "./packages/core/analyze.mjs", "./ingest": "./packages/core/ingest.mjs", "./cli": "./packages/cli/index.mjs"},
   "bin": {"incidentsutra": "packages/cli/index.mjs"},
   "engines": {"node": ">=20"},
-  "files": ["packages", "skills", "agents", "schemas", "policies", "rules", "workflows", "adapters", "templates", "fixtures", "examples", "docs", "documents/IncidentSutra-AI", ".claude-plugin", "scripts", "compatibility-matrix.json", "LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SUPPORT.md", "SECURITY.md", "CHANGELOG.md", "CITATION.cff", "llms.txt", "README.md", "AGENTS.md", "CLAUDE.md", "GEMINI.md", "GOVERNANCE.md", "ROADMAP.md"],
+  "files": ["packages", "skills", "agents", "schemas", "policies", "rules", "workflows", "adapters", "templates", "fixtures", "examples", "docs", "documents/IncidentSutra-AI", ".claude-plugin", "scripts", "site", "compatibility-matrix.json", "LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SUPPORT.md", "SECURITY.md", "CHANGELOG.md", "CITATION.cff", "llms.txt", "README.md", "AGENTS.md", "CLAUDE.md", "GEMINI.md", "GOVERNANCE.md", "ROADMAP.md"],
   "scripts": {
     "test": "node --test",
     "doctor": "node packages/cli/index.mjs doctor",

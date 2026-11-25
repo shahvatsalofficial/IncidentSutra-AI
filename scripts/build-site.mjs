@@ -1,28 +1,27 @@
-// Builds _site/ for GitHub Pages: landing page + documents/IncidentSutra-AI under /docs/, sitemap and robots.
+// Copies the built documentation website to _site/ for GitHub Pages, plus redirects for the former /docs/ URLs.
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const out = path.join(root, '_site');
-const BASE = 'https://shahvatsalofficial.github.io/IncidentSutra-AI/';
+const src = path.join(root, 'documents/IncidentSutra-AI'), out = path.join(root, '_site');
 
 fs.rmSync(out, {recursive: true, force: true});
-fs.mkdirSync(path.join(out, 'docs'), {recursive: true});
-fs.cpSync(path.join(root, 'documents/IncidentSutra-AI'), path.join(out, 'docs'), {recursive: true});
-fs.copyFileSync(path.join(root, 'site/index.html'), path.join(out, 'index.html'));
+fs.cpSync(src, out, {recursive: true});
 fs.writeFileSync(path.join(out, '.nojekyll'), '');
+fs.copyFileSync(path.join(root, 'llms.txt'), path.join(out, 'llms.txt'));
 
-const pages = [];
+let redirects = 0;
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
     const f = path.join(dir, e.name);
-    if (e.isDirectory()) walk(f);
-    else if (e.name.endsWith('.html')) pages.push(path.relative(out, f).replaceAll('\\', '/'));
+    if (e.isDirectory()) { walk(f); continue; }
+    if (!e.name.endsWith('.html') || e.name === '404.html') continue;
+    const rel = path.relative(src, f).replaceAll('\\', '/'), old = path.join(out, 'docs', rel);
+    const target = '../'.repeat(rel.split('/').length) + rel;
+    fs.mkdirSync(path.dirname(old), {recursive: true});
+    fs.writeFileSync(old, `<!doctype html><meta charset="utf-8"><title>Moved</title><meta http-equiv="refresh" content="0;url=${target}"><link rel="canonical" href="${target}"><a href="${target}">This page moved</a>\n`);
+    redirects++;
   }
-})(out);
-pages.sort();
-const urls = pages.map(p => (p === 'index.html' ? BASE : BASE + p));
-fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
-fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${BASE}sitemap.xml\n`);
-console.log(`site built: ${pages.length} pages in _site/`);
+})(src);
+console.log(`site built in _site/ with ${redirects} redirects`);

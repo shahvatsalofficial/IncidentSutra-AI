@@ -5,7 +5,9 @@ export const CSP = "default-src 'none'; style-src 'unsafe-inline'; img-src data:
 
 export const CSS = `
 :root{--bg:#f5f7fa;--card:#fff;--fg:#14202e;--mut:#506072;--bd:#dbe3ec;--ac:#0b5c7a;--ok:#0f7a4d;--warn:#9a5b00;--bad:#b3261e;--info:#2b4fa3;--chip:#eaf0f6;--code:#eef2f6}
-@media(prefers-color-scheme:dark){:root{--bg:#0d141c;--card:#141e29;--fg:#e6edf5;--mut:#9db0c4;--bd:#243445;--ac:#6cc4e6;--ok:#52d39b;--warn:#f0b24a;--bad:#ff8a80;--info:#8fb0ff;--chip:#1c2a39;--code:#1a2735}}
+:root:has(#theme-dark:checked){color-scheme:dark;--bg:#0d141c;--card:#141e29;--fg:#e6edf5;--mut:#9db0c4;--bd:#243445;--ac:#6cc4e6;--ok:#52d39b;--warn:#f0b24a;--bad:#ff8a80;--info:#8fb0ff;--chip:#1c2a39;--code:#1a2735}
+.theme-toggle{display:inline-flex;gap:.45rem;align-items:center;float:right;margin:0 0 10px;padding:6px 12px;border:1px solid var(--bd);border-radius:999px;background:var(--card);font-size:.85rem;cursor:pointer;min-height:40px}
+.theme-toggle+*{clear:both}@media print{.theme-toggle{display:none}}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--ac)}code{background:var(--code);padding:.1em .35em;border-radius:5px;font:.85em ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
@@ -37,5 +39,5 @@ footer{color:var(--mut);font-size:.82rem;margin-top:24px}
 `;
 
 export function page({title, description, body}) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta http-equiv="Content-Security-Policy" content="${CSP}"><meta name="description" content="${escapeHtml(description)}"><title>${escapeHtml(title)}</title><style>${CSS}</style></head><body><div class="wrap">${body}</div></body></html>\n`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta http-equiv="Content-Security-Policy" content="${CSP}"><meta name="description" content="${escapeHtml(description)}"><title>${escapeHtml(title)}</title><style>${CSS}</style></head><body><div class="wrap"><label class="theme-toggle"><input type="checkbox" id="theme-dark"> Dark theme</label>${body}</div></body></html>\n`;
 }

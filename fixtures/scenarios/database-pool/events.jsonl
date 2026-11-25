@@ -1,0 +1,6 @@
+{"timestamp":"2026-11-13T07:30:00Z","type":"deploy","service":"accounts","message":"accounts release 1.18","deploymentId":"accounts-1.18"}
+{"timestamp":"2026-11-13T08:05:00Z","type":"metric","service":"accounts","message":"database connections","attributes":{"db_connections":40}}
+{"timestamp":"2026-11-13T08:14:00Z","type":"error","service":"accounts","severity":"error","message":"postgres connection pool exhausted"}
+{"timestamp":"2026-11-13T08:15:00Z","type":"metric","service":"accounts","message":"database connections","attributes":{"db_connections":200}}
+{"timestamp":"2026-11-13T08:16:00Z","type":"alert","service":"accounts","severity":"critical","message":"login failures rising"}
+{"timestamp":"2026-11-13T08:17:00Z","type":"log","service":"accounts","severity":"warning","message":"slow query on sessions table, lock wait"}

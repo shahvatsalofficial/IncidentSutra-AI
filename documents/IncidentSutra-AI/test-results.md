@@ -4,9 +4,9 @@ Command: `node --test`
 
 | Total | Pass | Fail | Skipped | Exit code |
 | --- | --- | --- | --- | --- |
-| 192 | 192 | 0 | 0 | 0 |
+| 200 | 200 | 0 | 0 | 0 |
 
-Environment: Node v24.15.0, win32/x64, commit `3bdcd65`.
+Environment: Node v24.15.0, win32/x64, commit `4cb529d`.
 
 Skips: Two symlink tests return early when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.
 
@@ -82,6 +82,14 @@ Regenerate with `npm run test:report`. This file is machine-written from the rea
 - PASS — skill installer installs 20 skills project-locally for copilot
 - PASS — skill installer refuses to overwrite
 - PASS — serve requires a strong token and a valid report
+- PASS — scenario 1: errors before the release are counter-evidence
+- PASS — scenario 2: converted offset puts the deploy first
+- PASS — scenario 3: dependency raised, no change hypothesis against search
+- PASS — scenario 4: release outside the window is not linked; datastore raised
+- PASS — scenario 5: one storm, saturation raised, secrets masked
+- PASS — scenario 6: bad timestamp rejected and gaps stay unknown
+- PASS — website is light by default with a dark toggle, search and mobile menu
+- PASS — every wide diagram ships a narrow-screen version
 - PASS — normalizes +05:30 to UTC
 - PASS — normalizes negative offsets
 - PASS — midnight rollover across the date line

@@ -1,0 +1,31 @@
+/* ---- IncidentSutra additions ---- */
+.hero h1{overflow-wrap:break-word}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.dia-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.dia-scroll svg.dia{min-width:0}
+.sec figure.dia{margin:1.2rem 0;padding:1rem;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow)}
+.scnbox{margin:1.2rem 0 1.8rem;padding:1.1rem;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow);min-width:0}
+.scnbox h4{margin:1.1rem 0 .6rem}
+.scnbox .tl svg{display:block;min-width:620px;width:100%;height:auto;color:var(--fg);font-family:var(--font)}
+.mock-cards.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:520px){.mock-cards.four{grid-template-columns:repeat(2,1fr)}}
+.hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.7rem}
+.hcard{padding:.8rem .9rem;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--soft);min-width:0}
+.hcard b{display:block;font-size:.93rem;line-height:1.4;overflow-wrap:anywhere}.hcard p{margin:.45rem 0 0}.hcard .why{font-size:.84rem;color:var(--bad)}
+.chips .against{background:var(--bad-bg);color:var(--bad)}
+.chips span{overflow-wrap:anywhere}
+.prose code{overflow-wrap:anywhere}
+ol.flow.dia-narrow{display:none}
+.prose figure.dia ol.flow,.sec figure.dia ol.flow{margin:0}
+.vtl{list-style:none;margin:1rem 0;padding:0 0 0 1.1rem;border-left:3px solid var(--line2);display:grid;gap:.6rem}
+.vtl li{position:relative;margin:0;padding:.55rem .75rem;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--soft);font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}
+.vtl li::before{content:"";position:absolute;left:-1.52rem;top:.95rem;width:.7rem;height:.7rem;border-radius:2px;background:var(--muted)}
+.vtl li.change::before{background:var(--brand);transform:rotate(45deg)}.vtl li.issue::before{background:var(--bad);border-radius:50%}
+.vtl li.issue{border-color:color-mix(in srgb,var(--bad) 35%,var(--line))}.vtl li.change{border-color:color-mix(in srgb,var(--brand) 45%,var(--line));background:var(--tint)}
+.vtl time{font:700 .82rem var(--mono);margin-right:.5rem}.vtl em{font-style:normal;font-weight:700;margin-right:.35rem}
+@media (max-width:700px){
+.dia-wide,.scnbox .tl,.scnbox .tl+.legend{display:none}
+ol.flow.dia-narrow{display:grid}
+figure.dia::after{content:none}
+.prose pre.code code,.sec pre.code code,.install code{white-space:pre-wrap;overflow-wrap:anywhere}
+}

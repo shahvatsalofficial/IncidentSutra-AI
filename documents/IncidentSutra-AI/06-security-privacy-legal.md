@@ -18,6 +18,8 @@
 
 Full list of threats and residual risks: `docs/THREAT_MODEL.md`.
 
+<!-- svg:trust -->
+
 ## 2. Privacy
 
 - **Data flow**: input files are read locally; outputs are written only to the directory you choose. No telemetry, analytics or remote calls.
@@ -26,6 +28,8 @@ Full list of threats and residual risks: `docs/THREAT_MODEL.md`.
 - **Retention**: the tool keeps nothing between runs. Reports contain redacted text and source file hashes, not raw files.
 - **Personal data**: you remain the controller or processor of anything you feed in. Sanitize at the source. If you suspect a real credential reached a report, rotate it.
 - **GDPR, HIPAA, PCI**: the software makes no compliance claim. Local-only processing can simplify data-transfer analysis, but that conclusion is yours to reach.
+
+<!-- chart:redaction -->
 
 ## 3. Licence
 

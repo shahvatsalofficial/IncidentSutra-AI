@@ -1,0 +1,6 @@
+{"timestamp":"2026-11-12T14:00:00Z","type":"log","service":"payments","severity":"warning","message":"external payment provider latency rising, upstream timeout","traceId":"t-100"}
+{"timestamp":"2026-11-12T14:01:00Z","type":"deploy","service":"search","message":"search ranking release 9.1","deploymentId":"search-9.1"}
+{"timestamp":"2026-11-12T14:03:00Z","type":"error","service":"checkout","severity":"error","message":"payment gateway timeout after 30s","traceId":"t-101"}
+{"timestamp":"2026-11-12T14:04:00Z","type":"alert","service":"checkout","severity":"critical","message":"checkout failures above threshold"}
+{"timestamp":"2026-11-12T14:05:00Z","type":"metric","service":"checkout","message":"checkout latency","attributes":{"p95_ms":30200}}
+{"timestamp":"2026-11-12T14:06:00Z","type":"error","service":"checkout","severity":"error","message":"payment gateway timeout after 30s","traceId":"t-102"}

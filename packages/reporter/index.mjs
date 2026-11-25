@@ -2,7 +2,7 @@ import {escapeHtml as h, mdCell, page} from './theme.mjs';
 
 const list = a => (a && a.length ? a.join(', ') : 'none');
 
-function svgTimeline(report) {
+export function svgTimeline(report) {
   const ev = report.timeline;
   if (ev.length < 2) return '';
   const t0 = Date.parse(ev[0].timestamp), t1 = Date.parse(ev.at(-1).timestamp), span = Math.max(1, t1 - t0);

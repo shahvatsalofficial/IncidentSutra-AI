@@ -1,5 +1,7 @@
 # User guide
 
+<!-- flow:oncall -->
+
 ## 1. Install
 
 Nothing to install for a one-off run:
@@ -45,6 +47,8 @@ Open `report/incident-report.html`. Read in this order: Summary, Timeline, Hypot
 | not run | A check deliberately not executed |
 
 For each hypothesis ask: What would have to be true? What contradicts it? Which read-only check separates it from the others? Click an evidence ID to jump to the timeline row.
+
+<!-- flow:read -->
 
 ## 5. Verify before sharing
 
